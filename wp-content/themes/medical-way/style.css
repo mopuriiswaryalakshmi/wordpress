@@ -1,0 +1,5612 @@
+/*
+Theme Name: Medical Way
+Theme URI: https://promenadethemes.com/downloads/medical-way/
+Author: Promenade Themes
+Author URI: https://promenadethemes.com
+Description: Medical Way is responsive health theme for doctors, hospitals, medical clinics, pediatric, dental, gynecology, general therapist and all medial websites. It can be sound partner for developing functional and flexible medical websites as it comes with inbuilt theme options, custom widgets and sections. Get perfect, modern and professional website with no coding knowledge. Making your website your own is easier than ever before with Medical Way.
+Version: 1.0.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: medical-way
+Tags: custom-background, custom-menu, custom-logo, custom-header, featured-images, full-width-template, one-column, two-columns, sticky-post, theme-options, threaded-comments, translation-ready, footer-widgets, blog, entertainment, left-sidebar, right-sidebar
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Medical Way is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+    ## Links
+    ## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+    ## Posts and pages
+    ## Asides
+    ## Comments
+# Infinite scroll
+# Media
+    ## Captions
+    ## Galleries
+# Custom by Manesh
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust:     100%;
+}
+
+body {
+    margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+[hidden],
+template {
+    display: none;
+}
+
+a {
+    background-color: transparent;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+img {
+    border: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 1em 40px;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+}
+
+pre {
+    overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+button {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input {
+    line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+}
+
+optgroup {
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+button,
+input,
+select,
+textarea {
+    color: #404040;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+body {
+    background-color: #fff;
+    color: #999;
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0;
+    font-family: 'Asap', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0 0 15px 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #2fa3ad;
+    font-family: 'Asap', sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+dfn,
+cite,
+em,
+i {
+    font-style: italic;
+}
+
+blockquote {
+    margin: 0 1.5em;
+}
+
+address {
+    margin: 0 0 1.5em;
+}
+
+pre {
+    background: #eee;
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-size: 15px;
+    font-size: 0.9375rem;
+}
+
+code {
+    padding: 2px 4px;
+    font-family: monospace, monospace;
+    font-size: 1em;
+    background-color: #fbfbfb;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+abbr,
+acronym {
+    border-bottom: 1px dotted #666;
+    cursor: help;
+}
+
+mark,
+ins {
+    background: #fff9c0;
+    text-decoration: none;
+}
+
+big {
+    font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+    box-sizing: inherit;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: "";
+}
+
+blockquote,
+q {
+    quotes: "" "";
+}
+
+hr {
+    background-color: #ccc;
+    border: 0;
+    height: 1px;
+    margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+    margin: 0 0 1.5em 3em;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+li > ul,
+li > ol {
+    margin-bottom: 0;
+    margin-left: 1.5em;
+}
+
+ul, ol {
+    margin: 0 0 0.5em 1em;
+    padding: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 1.5em 1.5em;
+}
+
+img {
+    height: auto; /* Make sure images are scaled correctly. */
+    max-width: 100%; /* Adhere to container width. */
+}
+
+table {
+    margin: 0 0 1.5em;
+    width: 100%;
+}
+
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+.comment-reply-link,
+ a.button, input[type="button"],
+ input[type="reset"],
+ input[type="submit"] {
+    background: #2fa3ad none repeat scroll 0 0;
+    border: medium none;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 5px 15px;
+}
+
+
+button:hover,
+.comment-reply-link,
+a.button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    background-color: #2fa3ad ;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+    border-color: #aaa #bbb #bbb;
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+    color: #666;
+    border: 1px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+    color: #111;
+    outline:none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"]{
+    padding: 6px 0 6px 9px;
+}
+
+select {
+    width: 100%;
+    padding:5px;
+}
+
+textarea {
+    padding:10px 20px;
+    width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+a {
+    color: #2fa3ad ;
+    text-decoration: inherit;
+}
+
+a:visited {
+    color: #2fa3ad ;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color:#2fa3ad;
+}
+
+a:focus {
+    outline:inherit;
+}
+
+a:hover,
+a:active {
+    outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+#main-nav {
+    display: block;
+    float: right;
+    transition: all 0.5s ease-in-out 0s;
+    width: auto;
+}
+
+.enabled-sticky-primary-menu #main-nav.fixed {
+    box-shadow: 0 0 3px #aaaaaa;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.main-navigation ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation ul ul {
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px;
+    left: -9999px;
+    margin: 0;
+    min-width: 200px;
+    opacity: 0;
+    position: absolute;
+    top: 65px;
+    transition: opacity 0.4s ease-in-out 0s;
+    z-index: -9999;
+}
+
+.main-navigation ul ul ul {
+    left:100%;
+    top: 0
+}
+
+.main-navigation li {
+    position: relative;
+    display: inline-block;
+    margin-bottom:0;
+    float: left;
+}
+
+.main-navigation ul > li:hover > ul {
+    opacity: 1;
+    left:0;
+    z-index: 9999;
+}
+
+.main-navigation ul ul ul ul  {
+    display: none;
+}
+.main-navigation ul ul ul li:hover > ul {
+    display: block;
+}
+.main-navigation ul ul li:hover > ul {
+    opacity: 1;
+    left:100%;
+
+}
+.main-navigation li li {
+    float: none;
+    display: block;
+}
+
+.main-navigation ul li li:first-child > a {
+    border-left: none;
+}
+
+.main-navigation ul li a {
+    color: #373433;
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 20px 20px;
+    position: relative;
+    z-index: 99;
+}
+
+.main-navigation ul ul a {
+    border-bottom: 1px solid #ddd;
+    border-left: medium none;
+    border-right: medium none;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.18) inset;
+    font-size: 14px;
+    height: auto;
+    padding: 9px 15px;
+    text-align: left;
+    width: 100%;
+}
+.main-navigation ul li.menu-item-has-children ul.sub-menu li a,
+.home.page .slider-enabled.header-collapse ul li a{
+    color: #373433;
+}
+
+.main-navigation ul li a:hover{
+    color: #2fa3ad;
+}
+
+.main-navigation ul li.menu-item-has-children > a::after, .main-navigation ul li.page_item_has_children > a::after {
+    content: "";
+    font-family: FontAwesome;
+    margin-left: 10px;
+    margin-right: 0;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+.main-navigation ul li li.menu-item-has-children > a::after,
+.main-navigation ul li li.page_item_has_children > a::after {
+    content: "\f105";
+    top: 10px;
+}
+
+.main-navigation ul li.menu-item-has-children a,
+.main-navigation ul li.page_item_has_children a {
+    padding-right: 30px;
+}
+
+.main-navigation .menu-toggle,
+.main-navigation .dropdown-toggle {
+    display: none;
+}
+#mobile-trigger {
+  display: none;
+}
+#mobile-menu {
+  display: none;
+}
+
+/*comment and post navigation*/
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+    margin: 0 0 1.5em;
+    overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous,
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next,
+#infinite-handle span {
+    background: #2fa3ad;
+    float: left;
+    padding: 5px 15px;
+    width: auto;
+    line-height: 25px;
+}
+
+#infinite-handle span {
+    font-size: 1.5;
+    font-size: 15px;
+    color: #fff;
+}
+#infinite-handle{
+	margin-bottom: 20px;
+	height: auto;
+	overflow: hidden;
+}
+.comment-navigation .nav-previous:hover,
+.posts-navigation .nav-previous:hover,
+.post-navigation .nav-previous:hover,
+.comment-navigation .nav-next:hover,
+.posts-navigation .nav-next:hover,
+.post-navigation .nav-next:hover,
+ #infinite-handle span:hover {
+    background: #2fa3ad;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+    float: left;
+
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+    float: right;
+
+}
+
+.comment-navigation .nav-previous::before,
+.posts-navigation .nav-previous::before,
+.post-navigation .nav-previous::before {
+    content: "\f100";
+    display: inline-block;
+    font-family: FontAwesome;
+    margin-right: 5px;
+    color: #fff;
+}
+
+.comment-navigation .nav-next::after,
+.posts-navigation .nav-next::after,
+.post-navigation .nav-next::after {
+    content: "\f101";
+    display: inline-block;
+    font-family: FontAwesome;
+    margin-left: 5px;
+    color: #fff;
+}
+
+.page-links {
+    clear: both;
+    margin: 0 0 1.5em;
+}
+.nav-links .nav-previous a,
+.nav-links .nav-next a{
+    color: #fff;
+}
+.nav-links{
+    border-top: medium none;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.nav-links .page-numbers {
+    border: 1px solid;
+    padding: 5px 10px;
+}
+
+.nav-links .page-numbers.current,.nav-links a.page-numbers:hover {
+    background: #2fa3ad none repeat scroll 0 0;
+    border-color: #2fa3ad ;
+    color: #ffffff;
+}
+.nav-links .page-numbers.dots {
+    border: none;
+}
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;/* It should be ablolute */
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important; /* It should be clip auto */
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 15px;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 15px;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+.alignnone{
+    clear: both;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+
+.clear-fix::before,
+.clear-fix::after,
+.entry-content::before,
+.entry-content::after,
+.comment-content::before,
+.comment-content::after,
+.site-header::before,
+.site-header::after,
+.site-content::before,
+.site-content::after,
+.site-footer::before,
+.site-footer::after,
+#home-page-widget-area::after,
+#home-page-widget-area::before,
+#featured-slider::after,
+#featured-slider::before {
+    content: "";
+    display: table;
+}
+
+.clear-fix::after,
+.entry-content::after,
+.comment-content::after,
+.site-header::after,
+.site-content::after,
+.site-footer::after {
+    clear: both;
+}
+
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+    margin:30px 0 0;
+}
+.widget:first-child {
+    margin: 0;
+}
+
+/* Make sure select elements fit in widgets. */
+
+.widget select {
+    max-width: 100%;
+}
+#home-page-widget-area .widget-title {
+    color: #2fa3ad;
+    display: block;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 35px;
+    overflow: hidden;
+    padding-left: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+#home-page-widget-area .widget-title span{
+    position: relative;
+}
+
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+    display: block;
+}
+
+.hentry {
+    margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+    display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+    display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+    margin: 1.5em 0 0;
+}
+
+.entry-meta > span,
+.entry-footer > span,
+.single-post-meta > span {
+    margin: 0 10px 0 0;
+}
+
+.entry-meta > span a, .single-post-meta > span a, .entry-footer > span a {
+    color: #686868;
+    font-style: italic;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+    margin: 15px 0 0;
+}
+
+.entry-meta > span::before,
+.entry-footer > span::before,
+.single-post-meta > span::before {
+    display: inline-block;
+    font-family: FontAwesome;
+    height: 15px;
+    margin-right:8px;
+    content: "";
+    color:#2fa3ad;
+}
+
+.entry-meta .byline .author.vcard {
+    margin-left: -4px;
+}
+
+.entry-footer span {
+    margin-right: 15px;
+}
+
+.entry-footer span.author.vcard {
+    margin-right: 0px;
+}
+
+span.comments-link::before {
+    content: "\f086";
+}
+
+.entry-meta .posted-on::before,
+.single-post-meta .posted-on::before {
+    content: "\f073 ";
+}
+
+.entry-footer > .cat-links::before {
+    content: "\f07c";
+}
+
+.entry-meta .byline::before,
+.single-post-meta .byline::before {
+    content: "\f007";
+}
+
+.entry-footer .edit-link::before{
+    content: "\f044";
+}
+
+.entry-footer .tags-links::before{
+    content: "\f02c";
+}
+
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+    display: none;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.authorbox .author-avatar {
+    float: left;
+    margin: 5px 15px 10px 0;
+}
+.authorbox {
+    background:#e6ffff;
+    border: 1px solid #dddddd;
+    margin-top: 20px;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.authorbox.no-author-avatar .author-info {
+    margin-left: 0;
+}
+
+.authorbox .author-bio-posts-content {
+    margin-top: 10px;
+}
+
+.authorbox .author-bio-posts-content p {
+    margin: 0;
+}
+
+.authorbox .author-bio-posts-content ul {
+    list-style-position: inside;
+    margin: 0;
+}
+
+#respond {
+    clear: both;
+    display: block;
+    float: left;
+    width: 97%;
+}
+
+#commentform label {
+    display: inline-block;
+    width: 100px;
+}
+
+.comment-content a {
+    word-wrap: break-word;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+.comments-area form#commentform p {
+    float: left;
+    width: 33.33%;
+}
+
+.comments-area #commentform p.comment-notes,
+.comments-area #commentform p.comment-form-comment {
+    width: 100%;
+}
+
+.comment-content a {
+    word-wrap: break-word;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+.comment-form {
+    margin: 0 -15px;
+}
+
+.comments-area form#commentform p.logged-in-as ,
+.comments-area form#commentform p{
+    padding: 0 15px;
+}
+.comment-form-author input,
+.comment-form-email input,
+.comment-form-url input{
+    width: 100%;
+}
+#tab-reviews .comment-form-author,
+#tab-reviews .comment-form-email,
+#tab-reviews .comment-form-url{
+    width: 50%;
+}
+
+.comments-area form#commentform p.logged-in-as {
+    padding: 0 15px;
+    width: 100%;
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url{
+    width: 33.33%;
+    float: left;
+}
+
+.comment-list li.comment::after {
+    content: inherit;
+    display: none;
+}
+
+.comment-list li{
+    padding-left: 0;
+}
+
+.comment {
+    background-position: 0 -74px;
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+ol.comment-list {
+    border-radius: 5px;
+    float: left;
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: inherit;
+    padding: 0;
+    width: 100%;
+}
+
+ol.comment-list .children {
+    border: medium none;
+    float: left;
+    margin: 15px 0 15px 15px;
+    width: 98%;
+}
+
+ol.comment-list li {
+    list-style: outside none none;
+    margin-bottom: 15px;
+}
+
+.comment .comment-body {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 0;
+    clear: both;
+    display: block;
+    float: left;
+    margin-top: 5px;
+    padding: 10px 30px 10px 70px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+
+.comment-author.vcard {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.comment-list .children {
+    background-position: left 20px;
+    background-repeat: no-repeat;
+    border-left: 1px solid rgb(238, 238, 238);
+    margin-left: 0;
+    padding-left: 40px;
+}
+
+.comment-list li.comment > div img.avatar {
+    left: 29px;
+    position: absolute;
+    top: 29px;
+}
+
+#comment-form-title {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.vcard .avatar {
+    float: left;
+    margin: 7px 15px 15px 0;
+}
+
+.comment-metadata {
+    font-size: 13px;
+    font-style: italic;
+    line-height: 16px;
+    margin-bottom: 10px;
+}
+
+.comment-reply-link {
+    color: #ffffff;
+    display: inline-block;
+    float: none;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding: 1px 15px 3px;
+    border-radius: 2px;
+}
+
+a.comment-reply-link:hover {
+    color: #fff;
+}
+
+.form-allowed-tags code {
+    white-space: inherit;
+    word-wrap: break-word;
+}
+
+.comment-respond label {
+    display: block;
+    font-weight: normal;
+}
+
+.comments-title {
+    font-weight: normal;
+    margin: 25px 0 0;
+}
+
+.comment-content a {
+    word-wrap: break-word;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+#commentform label {
+    display: inline-block;
+    width: 100px;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+    display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+    display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+    margin-bottom: 1.5em;
+    max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+    margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+    text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+    margin-bottom: 1.5em;
+}
+
+.gallery-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.gallery-columns-2 .gallery-item {
+    max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+    max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+    max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+    max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+    max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+    max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+    max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+    max-width: 11.11%;
+}
+
+.gallery-caption {
+    display: block;
+}
+
+
+/*--------------------------------------------------------------
+# Custom By Manesh
+--------------------------------------------------------------*/
+
+#page {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.site-layout-boxed #page {
+    box-shadow: 0 0 1px #999999;
+    width: 1255px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.inner-wrapper {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.v-center{
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+input[type="submit"]:focus,
+.button:focus {
+	outline: none;
+}
+
+/*--------------------------------------------------------------
+##  Header Style By Manesh
+--------------------------------------------------------------*/
+
+.top-header,
+.site-header {
+    float: left;
+    width: 100%;
+}
+
+.top-header {
+    border-bottom: 1px solid #ddd;
+}
+
+.top-header .top-left {
+    float: left;
+}
+
+.top-header  .top-right {
+    float: right
+}
+
+.top-header .top-left span {
+    font-size: 14px;
+    padding: 15px;
+    border-right: 1px solid #ddd;
+    display: inline-block;
+}
+
+.top-header .top-left span i {
+    margin-right: 5px;
+}
+
+.top-header .top-menu-content {
+    float: left;
+}
+
+.top-header .top-menu-content {
+    border-right: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+.top-header .top-menu-content ul {
+    list-style: none;
+    display: inline-block;
+    margin:0;
+}
+
+.top-header .top-menu-content ul li,
+.top-header .top-menu-content ul li a {
+    display: inline-block;
+    color:#999;
+}
+
+.top-header .top-menu-content ul li a {
+    padding:15px;
+}
+
+.top-header .menu-social-menu-container {
+    display: inline-block;
+}
+
+.custom-logo-link,
+.site-logo-link,
+#site-identity {
+    float: left;
+    margin-right: 15px;
+}
+
+.custom-logo-link,.site-logo-link {
+    max-width: 300px;
+}
+
+.site-info a{
+    color: #fff;
+}
+
+.site-header {
+    position: relative;
+}
+
+#masthead {
+    z-index: 999;
+    padding: 20px 0px;
+    position: relative;
+    width: 100%;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.home.page-template-home #masthead.site-header.header-collapse {
+    position: fixed;
+    top: 0;
+}
+
+.home.blog #masthead,
+.home.page-template-default #masthead{
+    background-color: #fff;
+}
+
+
+.site-title {
+    color: #222;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 0;
+    font-family: 'Asap', sans-serif;
+
+}
+.site-branding {
+    float: left;
+    margin-right: 30px;
+    margin-top: 0;
+}
+.site-description {
+    color: #222;
+    font-size: 15px;
+    font-style: inherit;
+    margin-bottom:0px;
+}
+
+.site-title > a {
+    color: #2fa3ad;
+}
+
+#masthead.header-collapse{
+    padding: 5px 0px;
+    background: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    z-index: 9999;
+}
+
+#masthead.header-collapse .site-description {
+	color:#222;
+}
+
+.right-head {
+    float: right;
+    padding-top: 20px;
+}
+
+.social-links {
+    float: right;
+}
+
+.search-box {
+    float: right;
+    position: relative;
+}
+
+.search-box > a {
+    background: #2fa3ad none repeat scroll 0 0;
+    color: #ffffff;
+    display: block;
+    padding: 6.2px 8.7px;
+}
+
+.search-box > a i {
+    font-size: 17px;
+}
+
+.search-box > a:hover {
+    color: #fff;
+    background-color: #2fa3ad;
+}
+
+.search-box .search-box-wrap {
+    background: #ffffff none repeat scroll 0 0;
+    top: 45px;
+    box-shadow: 0 1px 2px;
+    display: none;
+    padding: 10px;
+    position: absolute;
+    right: 7%;
+    width: 300px;
+    z-index: 9999;
+}
+
+.search-box .search-box-wrap {
+    right: 3%;
+    width: 300px;
+}
+
+.search-form input.search-field {
+    background: #f9f9f9;
+    padding: 13px 9% 13px 10px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+.search-form input.search-field:focus {
+    background: #ebffff;
+}
+
+.search-submit {
+    border-radius: 0 ;
+    padding: 7.3px 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 44px;
+}
+
+.search-form {
+    position: relative;
+}
+
+
+
+
+/*--------------------------------------------------------------
+## Social Links Style By Manesh
+--------------------------------------------------------------*/
+
+.medical_way_widget_social {
+    clear: both;
+    overflow: hidden;
+}
+
+.medical_way_widget_social ul {
+    margin: 0;
+}
+
+.medical_way_widget_social li a {
+    border: 1px solid #bababa;
+    display: inline-block;
+    height: 28px;
+    line-height: 1.7;
+    margin-right: 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 28px;
+}
+
+.medical_way_widget_social li {
+    display: block;
+    float: left;
+    margin-right: 5px;
+}
+
+.widget-area .medical_way_widget_social li,
+#footer-widgets .medical_way_widget_social li {
+    padding: 0;
+}
+
+.widget-area .medical_way_widget_social li::before,
+#footer-widgets .medical_way_widget_social li::before {
+    display: none;
+}
+
+.medical_way_widget_social ul li a::before {
+    font-size: 18px;
+}
+
+.medical_way_widget_social li a i {
+    color:#cacad8;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.medical_way_widget_social ul li a::before {
+    color: #8c8c8c;
+    content: "\f0c1";
+    display: block;
+    font-family: FontAwesome;
+    font-weight: normal;
+    line-height: 28px;
+}
+
+.medical_way_widget_social ul li a:hover {
+    border: 1px solid rgba(0, 0, 0, 0);
+    -moz-transition: all 0.4s ease-out 0s;
+    -webkit-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
+}
+
+.medical_way_widget_social ul li a:hover::before {
+    color: #fff;
+}
+
+#home-page-widget-area .medical_way_widget_social ul li a::before {
+    color: #2fa3ad;
+}
+
+#home-page-widget-area .medical_way_widget_social ul li a:hover::before {
+    color: #fff;
+}
+
+#home-page-widget-area .medical_way_widget_social li a {
+    border: 1px solid #2fa3ad;
+}
+
+#home-page-widget-area .medical_way_widget_social ul{
+    text-align: center;   
+}
+
+#home-page-widget-area .medical_way_widget_social li{
+    float: none;
+    display: inline-block;
+    text-align: center;
+}
+
+#sidebar-primary .widget.medical_way_widget_social ul li {
+    border-bottom: none;
+}
+
+#sidebar-primary .medical_way_widget_social li a {
+    border: 1px solid #eeeeee;
+}
+
+#sidebar-primary .medical_way_widget_social ul li a::before{
+    color: #8c8c8c;
+}
+
+#sidebar-primary .medical_way_widget_social ul li a:hover::before{
+    color: #fff;
+}
+
+.medical_way_widget_social ul li a[href*="facebook.com"]::before {
+    content: "\f09a";
+}
+
+.medical_way_widget_social ul li a[href*="twitter.com"]::before {
+    content: "\f099";
+}
+
+.medical_way_widget_social ul li a[href*="linkedin.com"]::before {
+    content: "\f0e1";
+}
+
+.medical_way_widget_social ul li a[href*="plus.google.com"]::before {
+    content: "\f0d5";
+}
+
+.medical_way_widget_social ul li a[href*="youtube.com"]::before {
+    content: "\f167";
+}
+
+.medical_way_widget_social ul li a[href*="dribbble.com"]::before {
+    content: "\f17d";
+}
+
+.medical_way_widget_social ul li a[href*="pinterest.com"]::before {
+    content: "\f0d2";
+}
+
+.medical_way_widget_social ul li a[href*="bitbucket.org"]::before {
+    content: "\f171";
+}
+
+.medical_way_widget_social ul li a[href*="github.com"]::before {
+    content: "\f113";
+}
+
+.medical_way_widget_social ul li a[href*="codepen.io"]::before {
+    content: "\f1cb";
+}
+
+.medical_way_widget_social ul li a[href*="flickr.com"]::before {
+    content: "\f16e";
+}
+
+.medical_way_widget_social ul li a[href$="/feed/"]::before {
+    content: "\f09e";
+}
+
+.medical_way_widget_social ul li a[href*="foursquare.com"]::before {
+    content: "\f180";
+}
+
+.medical_way_widget_social ul li a[href*="instagram.com"]::before {
+    content: "\f16d";
+}
+
+.medical_way_widget_social ul li a[href*="tumblr.com"]::before {
+    content: "\f173";
+}
+
+.medical_way_widget_social ul li a[href*="reddit.com"]::before {
+    content: "\f1a1";
+}
+
+.medical_way_widget_social ul li a[href*="vimeo.com"]::before {
+    content: "\f194";
+}
+
+.medical_way_widget_social ul li a[href*="digg.com"]::before {
+    content: "\f1a6";
+}
+
+.medical_way_widget_social ul li a[href*="twitch.tv"]::before {
+    content: "\f1e8";
+}
+
+.medical_way_widget_social ul li a[href*="stumbleupon.com"]::before {
+    content: "\f1a4";
+}
+
+.medical_way_widget_social ul li a[href*="delicious.com"]::before {
+    content: "\f1a5";
+}
+
+.medical_way_widget_social ul li a[href*="mailto:"]::before {
+    content: "\f0e0";
+}
+.medical_way_widget_social ul li a[href*="soundcloud.com"]::before {
+    content: "\f1be";
+}
+.medical_way_widget_social ul li a[href*="wordpress.org"]::before {
+    content: "\f19a";
+}
+.medical_way_widget_social ul li a[href*="wordpress.com"]::before {
+    content: "\f19a";
+}
+
+.medical_way_widget_social ul li a[href*="jsfiddle.net"]::before {
+    content: "\f1cc";
+}
+
+.medical_way_widget_social ul li a[href*="tripadvisor.com"]::before {
+    content: "\f262";
+}
+
+.medical_way_widget_social ul li a[href*="foursquare.com"]::before {
+    content: "\f180";
+}
+
+.medical_way_widget_social ul li a[href*="angel.co"]::before {
+    content: "\f209";
+}
+
+.medical_way_widget_social ul li a[href*="slack.com"]::before {
+    content: "\f198";
+}
+
+/*social links hover effect */
+
+.medical_way_widget_social ul li a[href*="facebook.com"]:hover {
+    background-color: #3b5998;
+}
+
+.medical_way_widget_social ul li a[href*="twitter.com"]:hover {
+    background-color: #00aced;
+}
+
+.medical_way_widget_social ul li a[href*="plus.google.com"]:hover {
+    background-color: #dd4b39;
+}
+
+.medical_way_widget_social ul li a[href*="/feed/"]:hover  {
+    background-color: #dc622c;
+}
+
+.medical_way_widget_social ul li a[href*="wordpress.org"]:hover,
+.medical_way_widget_social ul li a[href*="wordpress.com"]:hover {
+    background-color: #45bbe6;
+}
+
+.medical_way_widget_social ul li a[href*="github.com"]:hover {
+    background-color: #4183c4;
+}
+
+.medical_way_widget_social ul li a[href*="linkedin.com"]:hover {
+    background-color: #007bb6;
+}
+
+.medical_way_widget_social ul li a[href*="pinterest.com"]:hover {
+    background-color: #cb2027;
+}
+
+.medical_way_widget_social ul li a[href*="flickr.com"]:hover {
+    background-color: #ff0084;
+}
+
+.medical_way_widget_social ul li a[href*="vimeo.com"]:hover {
+    background-color: #aad450;
+}
+
+.medical_way_widget_social ul li a[href*="youtube.com"]:hover {
+    background-color: #bb0000;
+}
+
+.medical_way_widget_social ul li a[href*="instagram.com"]:hover {
+    background-color: #517fa4;
+}
+
+.medical_way_widget_social ul li a[href*="dribbble.com"]:hover {
+    background-color: #ea4c89;
+}
+
+.medical_way_widget_social ul li a[href*="skype.com"]:hover {
+    background-color: #12a5f4;
+}
+
+.medical_way_widget_social ul li a[href*="digg.com"]:hover {
+    background-color: #333;
+}
+
+.medical_way_widget_social ul li a[href*="codepen.io"]:hover {
+    background-color: #000;
+}
+
+.medical_way_widget_social ul li a[href*="reddit.com"]:hover {
+    background-color: #ff4500;
+}
+
+.medical_way_widget_social ul li a[href*="mailto:"]:hover {
+    background-color: #1d62f0;
+}
+
+.medical_way_widget_social ul li a[href*="foursquare.com"]:hover {
+    background-color: #f94877;
+}
+
+.medical_way_widget_social ul li a[href*="stumbleupon.com"]:hover {
+    background-color: #eb4924;
+}
+
+.medical_way_widget_social ul li a[href*="twitch.tv"]:hover {
+    background-color: #6441a5;
+}
+
+.medical_way_widget_social ul li a[href*="tumblr.com"]:hover {
+    background-color: #32506d;
+}
+
+.medical_way_widget_social ul li a[href*="foursquare.com"]:hover {
+    background-color: #f94877;
+}
+
+.medical_way_widget_social ul li a[href*="stumbleupon.com"]:hover {
+    background-color: #eb4924;
+}
+
+.medical_way_widget_social ul li a[href*="twitch.tv"]:hover {
+    background-color: #6441a5;
+}
+
+.medical_way_widget_social ul li a[href*="tumblr.com"]:hover {
+    background-color: #32506d;
+}
+
+.medical_way_widget_social ul li a[href*="soundcloud.com"]:hover {
+    background-color: #ff5500;
+}
+
+.medical_way_widget_social ul li a[href*="wordpress.org"]:hover {
+    background-color:#45bbe6;
+}
+
+.medical_way_widget_social ul li a[href*="jsfiddle.net"]:hover {
+    background-color:#4679bd;
+}
+
+.medical_way_widget_social ul li a[href*="tripadvisor.com"]:hover {
+    background-color:#86c171;
+}
+
+.medical_way_widget_social ul li a[href*="foursquare.com"]:hover {
+    background-color:#2d5be3;
+}
+
+.medical_way_widget_social ul li a[href*="angel.co"]:hover {
+    background-color:#000;
+}
+
+.medical_way_widget_social ul li a[href*="slack.com"]:hover {
+    background-color:#56b68b;
+}
+
+/*--------------------------------------------------------------
+## Header Social widgets Style
+--------------------------------------------------------------*/
+
+.top-header .medical_way_widget_social li a {
+    background: transparent;
+    border:0px;
+}
+
+.top-header .medical_way_widget_social li a:before {
+    font-size: 14px;
+    color: #999;
+}
+
+.top-header .medical_way_widget_social li a:hover {
+    border:0px;
+}
+
+.top-header .top-social-menu {
+    margin-top:10px;
+}
+
+/*--------------------------------------------------------------
+## Main slider Style
+--------------------------------------------------------------*/
+
+#featured-slider,
+#main-slider .cycle-slide img {
+    float: left;
+    width: 100%;
+}
+
+
+#featured-slider {
+    overflow: hidden;
+    position: relative;
+    z-index: 99;
+}
+
+#main-slider {
+    color: #686868;
+    clear: both;
+    position: relative;
+    text-align: center;
+
+}
+
+#main-slider article {
+	width: 100%;
+}
+
+#main-slider.cycle-slide {
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative; 
+    display:table;
+    width:100%;
+	z-index:5;
+    padding-top:130px;
+    padding-bottom: 130px;
+}
+
+#main-slider .cycle-caption{
+	width:50%;
+    text-align: left;
+	z-index: 999;
+	transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+    position: absolute;
+    top: 50%;
+}
+
+#main-slider .cycle-slide .cycle-caption{
+
+	opacity:0;
+	display:table-cell;
+	vertical-align:middle;
+	
+	-webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+	
+	width:100%;
+    text-align: left;
+}
+
+#main-slider.overlay-enabled  .cycle-slide .cycle-caption .caption-wrap {
+	background: rgba(0,0,0,0.35);
+}
+
+#main-slider .cycle-slide .cycle-caption .caption-wrap {
+    width: 50%;
+    padding:15px;
+} 
+
+#main-slider .cycle-slide .cycle-caption .caption-wrap p{
+    margin-bottom: 0px;
+}
+
+#main-slider  .cycle-slide.cycle-slide-active .cycle-caption {
+	opacity:1;
+	
+	-webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+
+#main-slider .cycle-caption h3 {
+    color: #fff;
+    display: inline-block;
+    font-family: 'Asap', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+	position:relative;
+	width:100%;
+
+}
+
+#main-slider .cycle-caption .slider-meta {
+    font-size: 17px;
+    margin-bottom: 0px;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 100%;
+}
+
+.slider-cta {
+    padding-top: 20px;
+}
+
+.slider-cta a,
+.call-to-action-buttons a.cta-button,
+.medical_way_widget_latest_news .latest-news-item a.cta-button,
+.medical_way_widget_contact .contact-wrapper form input[type="submit"],
+.bg_enabled.medical_way_widget_contact .contact-wrapper form input[type="submit"] {
+    border-radius: 2px;
+    background: #f1703d;
+    float: left;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 9px 21px;
+    line-height: 19px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #DC5520;
+	
+	-webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+#main-slider .slider-cta a {
+    color: #fff;
+}
+
+.slider-cta a:hover,
+.call-to-action-buttons a.cta-button:hover {
+    background: #DC5520;
+    color: #fff;
+	
+	-webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.slider-cta a,
+.medical_way_widget_latest_news .latest-news-item a.cta-button,
+.bg_enabled .call-to-action-buttons a.cta-button,
+.bg_enabled.medical_way_widget_contact .contact-wrapper form input[type="submit"] {
+	border-bottom: 2px solid #DC5520;
+    color: #fff;
+	
+		-webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.slider-cta a:hover,
+.medical_way_widget_latest_news .latest-news-item a.cta-button:hover,
+.bg_enabled .call-to-action-buttons a.cta-button:hover,
+.bg_enabled.medical_way_widget_contact .contact-wrapper form input[type="submit"]:hover {
+	background: #DC5520;
+    color: #fff;
+	
+		-webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.custom-button::after {
+    content: "";
+    display: inline-block;
+    font-family: FontAwesome;
+    margin-left: 10px;
+}
+.slider-buttons a:visited {
+    color:#fff;
+}
+
+#main-slider  .next-prev-wrapper {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1300px;
+    position: relative;
+}
+
+/*slider pager box*/
+#main-slider .pager-box {
+    background-color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    float: none;
+    height: 6px;
+    margin: 3px 5px;
+    width: 33px;
+    z-index: 99;
+}
+
+#main-slider .cycle-pager {
+    bottom: 5%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 999;
+}
+
+#main-slider .pager-box.cycle-pager-active {
+    background-color: #f1703d ;
+    border-color:#fff;
+}
+
+/*Slider cycle next / previous*/
+
+#main-slider .cycle-prev,
+#main-slider .cycle-next {
+    top: 5%;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-weight: normal;
+    position: absolute;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    z-index: 99999;
+    /*line-height:1.3 ;*/
+    background-color: #f1703d;
+	opacity:1;
+}
+#main-slider .cycle-prev {
+    right: 60px;
+}
+#main-slider .cycle-next {
+    right: 20px;
+}
+#main-slider .cycle-prev i,
+#main-slider .cycle-next i{
+	font-size:20px;
+	color:#fff;
+	line-height:30px;
+}
+
+#main-slider .cycle-prev:hover,
+#main-slider .cycle-next:hover{
+   color: #fff;
+   background-color:#f1703d ;
+   border-color:#f1703d ;
+}
+
+#main-slider:hover .cycle-prev,
+#main-slider:hover .cycle-next {
+	opacity:1;
+}
+
+#main-slider:hover .cycle-prev,
+#main-slider:hover .cycle-next,
+#main-slider .cycle-prev,
+#main-slider .cycle-next {
+	-webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+
+
+/*--------------------------------------------------------------
+## Main Content Style By Manesh
+--------------------------------------------------------------*/
+
+#primary {
+    width: 70%;
+    padding-left:15px;
+    padding-right: 15px;
+    float: left;
+}
+
+#content {
+    padding: 40px 0 40px 0px;
+    clear: both;
+}
+
+.search-results .page-title {
+    text-align: left;
+}
+
+.home-widgets-disabled #content {
+    display: none;
+}
+
+.home.page-template-home #content,
+.page-template-home #content {
+    padding: 0;
+}
+
+#featured-content {
+    padding: 40px 0 0;
+    clear: both;
+}
+
+#primary article {
+    border: 1px solid #eeeeee;
+    padding: 20px;
+    float: left;
+    width: 100%;
+}
+
+.search-results #primary article {
+    text-align: left;
+}
+
+.search-results #primary article .entry-title:after{
+    display: none;
+}
+
+.search-results #primary article .entry-title {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.search-results #primary article .entry-summary,
+.search-results #primary article .entry-content,
+.search-results #primary article .entry-meta,
+.search-results #primary article .entry-footer {
+    font-size: 14px;
+}
+
+.home.home-content-not-enabled #content {
+    padding: 0;
+}
+
+#featured-content{
+    float: left;
+    width: 100%;
+}
+
+.entry-title {
+    padding-bottom: 15px;
+}
+
+h1.page-title {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #eeeeee;
+    color: #666666;
+    padding: 5px 20px;
+    text-align: center;
+}
+
+#primary article .entry-meta .cat-links:before {
+    display: none;
+}
+
+/*--------------------------------------------------------------
+## Sidebar Style By Manesh
+--------------------------------------------------------------*/
+.sidebar {
+    width:30%;
+    padding-left:15px;
+    padding-right: 15px;
+}
+
+.sidebar .widget-title {
+    padding-bottom: 15px;
+}
+
+#sidebar-primary {
+    float: right;
+}
+
+.sidebar a.read-more {
+    font-size: 13px;
+}
+
+.sidebar a.read-more::before {
+    font-size: 10px;
+}
+
+#sidebar-secondary {
+    float: left;
+}
+
+.sidebar .widget {
+    border: 1px solid #eeeeee;
+    margin: 0 0 30px;
+    padding: 20px;;
+}
+
+.widget-area .widget::after,
+.widget-area .widget::before {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.widget-area ul {
+    list-style: outside none none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget-area ul ul {
+    border-bottom:none;
+    padding-bottom: 0;
+}
+
+.widget-area ul li {
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-top: 5px;
+    position: relative;
+}
+
+.sidebar a {
+    color: #121212;
+}
+.widget-area ul ul ul ul ul > li {
+    padding-left: 0;
+}
+
+.widget-area ul ul ul ul ul > li::before {
+    left:-20px;
+}
+.sidebar .search-form input.search-field {
+    padding: 13px 10px;
+    width: 100%;
+    margin: 0;
+    height: auto;
+}
+.sidebar .search-field {
+    float: left;
+    margin-right: 5px;
+    width: 57%;
+}
+
+.widget_calendar caption {
+    background: #2fa3ad none repeat scroll 0 0;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.sidebar .widget-title, .entry-title {
+    border-bottom: 3px double;
+    padding-bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+## Footer Style By Manesh
+--------------------------------------------------------------*/
+
+#colophon {
+    background-color: #000;
+    border-top: 1px solid #111;/* #5e5b5b */
+    clear: both;
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+#colophon a {
+    color:#fff;
+}
+
+#colophon a:hover {
+    color: #ccc;
+}
+
+#colophon .copyright {
+    margin-bottom: 5px;
+}
+
+.copyright {
+    float: left;
+}
+
+.site-info {
+    float: right;
+}
+
+#colophon .copyright {
+    margin-bottom:0;
+}
+
+#footer-widgets {
+    background-color: #121212;
+    border-top: 4px solid #2fa3ad ;
+    color: #fff;
+    overflow: hidden;
+    padding: 30px 0;
+}
+
+#footer-widgets .widget-column .container {
+    width: 100%;
+}
+
+#footer-widgets .widget-title {
+    border-bottom: 1px solid #8e8e8e; /* #3c3c3c */
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+#footer-widgets h3.widget-title::after {
+    background-color: #2fa3ad ;
+    bottom: -3px;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 85px;
+}
+
+#footer-widgets ul {
+    list-style: none;
+    margin: 0;
+}
+
+
+#footer-widgets a {
+    color: #dddddd;
+}
+
+#footer-widgets ul li {
+    padding: 2px 0 3px 0px;
+    position: relative;
+}
+.widget-area ul li::before {
+
+    top: 1px;
+}
+#footer-widgets .widget-column {
+    float: left;
+    padding: 0 15px;
+    width: 25%;
+}
+
+#footer-widgets .footer-active-1 {
+    width: 100%;
+}
+
+#footer-widgets .footer-active-2 {
+    width: 50%;
+}
+
+#footer-widgets .footer-active-3 {
+    width: 33.33%;
+}
+
+#footer-widgets .footer-active-4 {
+    width: 25%;
+}
+
+.widget-column .widget:first-child {
+    margin-top: 0;
+}
+
+.widget-column .widget {
+    margin-top: 15px;
+}
+
+/*Footer Navigation*/
+
+#footer-navigation {
+    float: left;
+}
+
+#footer-navigation li {
+    display: inline-block;
+    list-style: outside none none;
+}
+
+#colophon .copyright {
+    clear: both;
+}
+
+#footer-navigation li a {
+    display: block;
+    padding: 5px 0;
+    margin-right: 15px;
+}
+
+#footer-navigation ul {
+    margin: 0;
+}
+
+/*Scrollup Style*/
+
+.scrollup {
+    background-color: #f1703d;
+    border-radius: 0;
+    bottom: 50px;
+    color: #fff;
+    display: none;
+    float: right;
+    line-height: 1.2;
+    padding: 0;
+    position: fixed;
+    right: 32px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    text-align: center;
+    z-index: 99999;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.scrollup:hover {
+    background-color: #2fa3ad;
+}
+
+.scrollup i {
+    font-size: 30px;
+    color: #fff;
+    line-height: 47px;
+}
+
+/*--------------------------------------------------------------
+##  layout sidebar By Manesh
+--------------------------------------------------------------*/
+
+.global-layout-left-sidebar #primary {
+    float: right;
+}
+
+.three-columns-enabled #primary {
+    display: inline-block;
+    float: none;
+    width: 50%;
+}
+
+.global-layout-three-columns #sidebar-primary {
+    float: right;
+    width: 25%;
+}
+
+.global-layout-no-sidebar #primary{
+    width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Inner Pages Style By Manesh
+--------------------------------------------------------------*/
+
+/*Basic Breadcrumb */
+
+#breadcrumb {
+    background: #444 none repeat scroll 0 0;
+    padding: 7px 0;
+    color: #fff;
+    float: left;
+    width: 100%;
+}
+
+#breadcrumb.bg-enabled  {
+	padding: 50px 0px;
+} 
+
+#breadcrumb.overlay-enabled {
+	position: relative;
+}
+
+#breadcrumb.overlay-enabled:before {
+	content:"";
+	background: rgba(0,0,0,0.45);
+	position: absolute;
+	top: 0;
+	left:0;
+	height: 100%;
+	width: 100%;
+}
+
+#breadcrumb .breadcrumbs {
+	position: relative;
+}
+
+#breadcrumb a {
+    color: #dddddd;
+}
+#breadcrumb .container > div {
+    overflow: hidden;
+}
+.breadcrumb-trail li {
+    display: block;
+    float: left;
+    list-style: outside none none;
+    padding-right: 10px;
+}
+.breadcrumb-trail li.trail-item.trail-end::after {
+    display: none;
+}
+.breadcrumb-trail li::after {
+    content: "/";
+    margin-left: 10px;
+}
+.breadcrumb-trail  .trail-items {
+    margin: 0;
+    padding: 0;
+}
+/*Error 404 Page*/
+
+section.error-404 {
+    text-align: center;
+}
+
+#quick-links-404 ul li {
+    display: inline-block;
+    list-style: outside none none;
+}
+
+#quick-links-404 ul li a {
+    color: #404040;
+    display: block;
+    padding: 5px 10px;
+}
+
+.error404 #primary {
+    width: 100%;
+}
+
+/*contact form 7*/
+
+.wpcf7-form {
+   /* max-width: 875px; */
+   width:100%;
+}
+
+div.wpcf7 {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.wpcf7 input {
+    width: 100%;
+}
+
+.wpcf7 input.wpcf7-submit {
+    width: auto;
+}
+
+/*--------------------------------------------------------------
+## Extra css for Pro By Manesh
+--------------------------------------------------------------*/
+
+/* Global layout sidebar By Manesh*/
+
+#home-page-widget-area {
+    padding: 0px;
+    clear: both;
+}
+
+#home-page-widget-area  .widget {
+    margin: 0px;
+    padding: 75px 0;
+}
+
+.medical_way_widget_featured_page img {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+/*--------------------------------------------------------------
+## service widget / page css By Manesh
+--------------------------------------------------------------*/
+
+.medical_way_widget_services .services-left {
+    float: left;
+    width: 60%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.medical_way_widget_services .services-right {
+    float: left;
+    width: 40%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.medical_way_widget_services .services-left form {
+    float: left;
+}
+
+.medical_way_widget_services .services-right form {
+    float: right;
+}
+
+.medical_way_widget_services form {
+    width: 90%;
+    padding: 30px;
+    padding-bottom: 0px;
+    background:#ecf5fa;
+}
+
+.medical_way_widget_services form h3 {
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.medical_way_widget_services .services-top,
+.page-template-services .services-top, 
+.medical_way_widget_services form input {
+    float: left;
+    width: 100%;
+}
+
+.medical_way_widget_services form input,
+.medical_way_widget_services form textarea {
+    padding: 10px 15px;
+    display: block;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.medical_way_widget_services form input[type="submit"]{
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 16px;
+    background-color: #f1703d; 
+    text-transform: uppercase;
+    border-radius: 2px;
+    color: #fff;
+    border: none;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #DC5520;
+    
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.medical_way_widget_services .wpcf7 input.wpcf7-submit {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.medical_way_widget_services form input[type="submit"]:hover {
+    background-color: #DC5520; 
+}
+
+.medical_way_widget_services div.wpcf7-validation-errors {
+    margin-top:0px;
+}
+
+.medical_way_widget_services .services-info-title,
+.page-template-services  .services-info-title{
+    color: #2fa3ad;
+    font-size: 32px;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    line-height: 1.4;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.medical_way_widget_services .services-top p,
+.page-template-services .services-top p {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.page-template-services .services-top {
+	text-align: center;
+}
+
+.medical_way_widget_services .services-item,
+.page-template-services  .services-item{
+    display: inline-block;
+    padding: 15px;
+    transition: background-color 0.5s ease-out 0s;
+    text-align: left;
+    vertical-align: top;
+    margin-left: -3px;
+    width: 50%;
+}
+
+.page-template-services  .services-item {
+	width: 33.33%;
+}
+
+.services-item-title,
+.page-template-services  .services-item-title{
+    display: block;
+    color: #2fa3ad;
+    font-weight: 400;
+    padding: 10px 0;
+    font-size: 20px;
+    margin-bottom: 0px;
+    text-align: left;
+    clear: both;
+}
+.services-item > p,
+.page-template-services > p{
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.medical_way_widget_services .services-column-4 .services-item,
+.page-template-services .services-column-4 .services-item{
+    width: 25%;
+}
+
+.medical_way_widget_services .services-column-3 .services-item,
+.page-template-services .services-column-4 .services-item{
+    width: 33.33%;
+}
+
+.medical_way_widget_services .services-column-2 .services-item,
+.page-template-services .services-column-4 .services-item{
+    width: 50%;
+}
+
+.medical_way_widget_services .services-column-1 .services-item,
+.page-template-services .services-column-4 .services-item{
+    width: 100%;
+}
+
+.page-template-team #primary,
+.page-template-services #primary,
+.page-template-departments #primary{
+	width: 100%;
+} 
+
+
+
+/*--------------------------------------------------------------
+## call to action widgets style By Manesh
+--------------------------------------------------------------*/
+#home-page-widget-area .medical_way_widget_call_to_action .widget-title,
+#home-page-widget-area .medical_way_widget_call_to_action .call-to-action-content p{
+    color: #999;
+}
+.medical_way_widget_call_to_action {
+    background: #ecf5fa;
+    padding: 20px 30px;
+    position: relative;
+    z-index: 999;
+}
+
+#home-page-widget-area  .widget.medical_way_widget_call_to_action {
+    padding-bottom: 0px;
+} 
+
+.bg_enabled.medical_way_widget_call_to_action::before {
+    background: rgba(37, 38, 39, 0.78);
+    content: "";
+    display: block!important;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    left: 0;
+}
+
+.bg_enabled.medical_way_widget_call_to_action {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+#home-page-widget-area .medical_way_widget_call_to_action .widget-title {
+    border: medium none;
+}
+
+
+a.button {
+    color: #ffffff;
+    display: inline-block;
+}
+
+.sidebar .medical_way_widget_call_to_action,
+.widget-column .medical_way_widget_call_to_action {
+    padding: 5px;
+}
+
+.medical_way_widget_call_to_action .call-to-action-buttons {
+	margin-top:30px;
+}
+
+.medical_way_widget_call_to_action .cta-left {
+    float: left;
+}
+
+.medical_way_widget_call_to_action .cta-right {
+    float: right;
+    text-align: center;
+}
+
+.medical_way_widget_call_to_action .cta-right img {
+    display: inline-block;
+}
+
+.medical_way_widget_call_to_action .cta-left,
+.medical_way_widget_call_to_action .cta-right {
+    width: 50%;
+} 
+
+.medical_way_widget_call_to_action .call-to-action-content {
+    text-align: left;
+}
+
+.medical_way_widget_call_to_action .call-to-action-content h3 {
+    color: #2fa3ad;
+    font-size: 32px;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    line-height: 1.4;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.medical_way_widget_call_to_action .call-to-action-content p {
+    font-size: 16px;
+    color: #999;
+}
+
+.medical_way_widget_call_to_action .call-to-action-content p strong {
+    font-weight: 400;
+    color:#2fa3ad; 
+}
+
+/*--------------------------------------------------------------
+## Departments widgets styles
+--------------------------------------------------------------*/
+
+.medical_way_widget_departments{
+    background: #fff;
+}
+
+
+.medical_way_widget_departments .department-right {
+    float: right;
+    width: 60%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+.medical_way_widget_departments .department-left{
+    float: left;
+    width: 40%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.medical_way_widget_departments .department-info-title,
+.page-template-departments .department-info-title{
+    color: #2fa3ad;
+    font-size: 32px;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    line-height: 1.4;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.medical_way_widget_departments .department-top p,
+.page-template-departments .department-top p{
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.page-template-departments .department-top {
+	text-align: center;
+}
+
+.medical_way_widget_departments .department-item,
+.page-template-departments .department-item{
+    display: inline-block;
+    padding: 15px;
+    transition: background-color 0.5s ease-out 0s;
+    text-align: left;
+    vertical-align: top;
+    margin-left: -3px;
+    width: 50%;
+}
+
+.page-template-departments .department-item {
+	width: 33.33%;
+}
+
+.department-item-title,
+.page-template-departments .department-item-title{
+    display: block;
+    color: #2fa3ad;
+    font-weight: 400;
+    padding: 10px 0;
+    font-size: 20px;
+    margin-bottom: 0px;
+    text-align: left;
+    clear: both;
+}
+.department-item > p,
+.page-template-departments > p {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.medical_way_widget_departments .department-left img {
+    float: left;
+}
+
+.medical_way_widget_departments .department-right img {
+    float: right;
+}
+
+
+/*--------------------------------------------------------------
+## Testimonial widgets styles
+--------------------------------------------------------------*/
+
+.bg_enabled.medical_way_widget_testimonial {
+    position: relative;
+}
+
+.bg_enabled.medical_way_widget_testimonial:before {
+    content:"";
+    display: block !important;
+    background: rgba(0,0,0,0.78);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+.medical_way_widget_testimonial .testimonial-top,
+.medical_way_widget_testimonial #testimonials-slider,
+.medical_way_widget_testimonial #testimonials-slider .testimonials-wrap .testimonials-caption p {
+    float: left;
+    width: 100%;
+}
+
+.medical_way_widget_testimonial .testimonial-top,
+.medical_way_widget_testimonial #testimonials-slider {
+    text-align: center;
+    float: left;
+    width: 100%;
+}
+
+.medical_way_widget_testimonial #testimonials-slider article {
+	width: 100%;
+}
+
+.medical_way_widget_testimonial .testimonial-top {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.medical_way_widget_testimonial .testimonial-top:before{
+    content:"\f10e";
+    font-size: 45px;
+    color:#fff;
+    font-family: "FontAwesome";
+    display: inline-block;
+    margin-top:15px;
+}
+
+.medical_way_widget_testimonial .testimonial-top h3 {
+    color: #2fa3ad;
+    font-size: 32px;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    line-height: 1.4;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.medical_way_widget_testimonial .testimonial-top p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.medical_way_widget_testimonial #testimonials-slider .owl-item img {
+    display: inline-block;
+    width: auto;
+} 
+
+.medical_way_widget_testimonial #testimonials-slider .testimonials-wrap {
+    width: 70%;
+    display: inline-block;
+}
+
+.medical_way_widget_testimonial #testimonials-slider .testimonials-wrap figure {
+    display: inline-block;
+    margin:0;
+    margin-right: 15px;
+}
+
+.medical_way_widget_testimonial #testimonials-slider .testimonials-wrap figure img {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+.medical_way_widget_testimonial #testimonials-slider .testimonials-wrap .testimonials-caption p {
+    font-size: 16px;
+    line-height: 25px;
+    color: #fff;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 0px;
+    margin-top: 15px;
+}
+
+.medical_way_widget_testimonial #testimonials-slider .testimonials-wrap .meta-wrap,
+.medical_way_widget_testimonial #testimonials-slider .testimonials-wrap .testimonials-meta span,
+.medical_way_widget_testimonial #testimonials-slider .testimonials-wrap .testimonials-meta strong {
+    display: inline-block;
+}
+
+.medical_way_widget_testimonial #testimonials-slider .testimonials-wrap .meta-wrap {
+    text-align: left;
+}
+
+.medical_way_widget_testimonial #testimonials-slider .testimonials-wrap .testimonials-meta{
+    margin-top: 20px;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+}
+
+.medical_way_widget_testimonial #testimonials-slider .testimonials-wrap .testimonials-meta span,
+.medical_way_widget_testimonial #testimonials-slider .testimonials-wrap .testimonials-meta strong {
+    text-align: center;
+    color: #fff;
+    width: 100%;
+
+}
+
+.medical_way_widget_testimonial #testimonials-slider .testimonials-wrap .testimonials-meta strong {
+    font-weight: 400;
+    color:#2fa3ad;
+}
+
+.medical_way_widget_testimonial #testimonials-slider .testimonials-wrap .testimonials-meta .testimonial-title {
+	font-size: 24px;
+
+}
+
+/*slider pager box*/
+.medical_way_widget_testimonial #testimonials-slider .pager-box {
+    background-color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    float: none;
+    height: 6px;
+    margin: 3px 5px;
+    width: 33px;
+    z-index: 99;
+}
+
+.medical_way_widget_testimonial #testimonials-slider .cycle-pager {
+    bottom: -40px;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 999;
+}
+
+.medical_way_widget_testimonial #testimonials-slider .pager-box.cycle-pager-active {
+    background-color: #f1703d ;
+    border-color:#fff;
+}
+
+/*Slider cycle next / previous*/
+
+.medical_way_widget_testimonial #testimonials-slider .cycle-prev,
+.medical_way_widget_testimonial #testimonials-slider .cycle-next {
+    top: 5%;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-weight: normal;
+    position: absolute;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    z-index: 99999;
+    /*line-height:1.3 ;*/
+    background-color: #f1703d;
+	opacity:1;
+}
+.medical_way_widget_testimonial #testimonials-slider .cycle-prev {
+    right: 40px;
+}
+.medical_way_widget_testimonial #testimonials-slider .cycle-next {
+    right: 0;
+}
+.medical_way_widget_testimonial #testimonials-slider .cycle-prev i,
+.medical_way_widget_testimonial #testimonials-slider .cycle-next i{
+	font-size:20px;
+	color:#fff;
+	line-height:30px;
+}
+
+.medical_way_widget_testimonial #testimonials-slider .cycle-prev:hover,
+.medical_way_widget_testimonial #testimonials-slider .cycle-next:hover{
+   color: #fff;
+   background-color:#f1703d ;
+   border-color:#f1703d ;
+}
+
+.medical_way_widget_testimonial #testimonials-slider:hover .cycle-prev,
+.medical_way_widget_testimonial #testimonials-slider:hover .cycle-next,
+.medical_way_widget_testimonial #testimonials-slider .cycle-prev,
+.medical_way_widget_testimonial #testimonials-slider .cycle-next {
+	-webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+
+
+/*--------------------------------------------------------------
+## some facts widgets style By Manesh
+--------------------------------------------------------------*/
+.bg_enabled.medical_way_widget_facts::before {
+    background: rgba(37, 38, 39, 0.78);
+    content: "";
+    display: block!important;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    left: 0;
+}
+
+.bg_enabled.medical_way_widget_facts {
+    background: #2fa3ad none repeat scroll 0 0;
+    padding: 75px 0px;
+    text-align: center;
+    z-index: 999;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+#home-page-widget-area .medical_way_widget_facts .widget-title {
+    border: medium none;
+    color: #fff;
+}
+
+.medical_way_widget_facts .fact-full .counter-item {
+    width: 100%;
+    float: left;
+}
+
+.medical_way_widget_facts .fact-half .counter-item {
+    width: 50%;
+    float: left;
+}
+
+.medical_way_widget_facts .fact-third .counter-item {
+    width: 33%;
+    float: left;
+}
+
+.medical_way_widget_facts .fact-fourth .counter-item {
+    width: 25%;
+    float: left;
+}
+
+.medical_way_widget_facts .counter-item span.count-icon {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.medical_way_widget_facts .counter-item span.count-icon i {
+    color: #fff;
+    font-size: 40px;
+}
+
+.medical_way_widget_facts .counter-item span.count {
+    color: #fff;
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    margin: 25px 0 10px 0;
+    line-height: 56px;
+}
+
+.medical_way_widget_facts .counter-item span.count-text {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+# Features widgets style By Manesh
+--------------------------------------------------------------*/
+.medical_way_widget_features{
+    background: #2fa3ad none repeat scroll 0 0;
+    padding: 100px 0 30px 0;
+    z-index: 999;
+    margin: 0!important;
+}
+
+#home-page-widget-area .medical_way_widget_features .widget-title{
+    color: #fff;
+}
+
+#home-page-widget-area .medical_way_widget_features .widget-title span::before,
+#home-page-widget-area .medical_way_widget_features .widget-title span::after {
+    background-color: #fff;
+}
+
+#home-page-widget-area .medical_way_widget_features .feature-image {
+    float: left;
+    padding: 0 50px 10px 0;
+    width: 50%;
+
+}
+
+#home-page-widget-area .medical_way_widget_features .feature-image img {
+    float: right;
+}
+
+#home-page-widget-area .medical_way_widget_features .features-list {
+    float: right;
+    padding: 0 0 10px 20px;
+    width: 50%;
+}
+
+#home-page-widget-area .medical_way_widget_features .features-list .features-item {
+    clear: both;
+    display: block;
+    float: left;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+#home-page-widget-area .medical_way_widget_features .features-list .features-icon{
+    float: left;
+    width: 15%;
+}
+
+#home-page-widget-area .medical_way_widget_features .features-list .features-icon i{
+    font-size: 40px;
+    color: #fff;
+    line-height: 75px;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+}
+
+#home-page-widget-area .medical_way_widget_features .features-list .features-detail{
+    float: left;
+    width: 85%;
+}
+
+#home-page-widget-area .medical_way_widget_features .features-list .features-detail h3,
+#home-page-widget-area .medical_way_widget_features .features-list .features-detail p{
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+/*--------------------------------------------------------------
+### Advaneced recent post widget style By Manesh
+--------------------------------------------------------------*/
+
+.medical_way_widget_advanced_recent_posts .advanced-recent-posts-item {
+    clear: both;
+    margin-top: 20px;
+    float: left;
+    width: 100%;
+}
+
+.medical_way_widget_advanced_recent_posts .advanced-recent-posts-item:first-child {
+    margin: 0;
+}
+
+.medical_way_widget_advanced_recent_posts .advanced-recent-posts-title {
+    font-size: 15px;
+    margin-bottom:0;
+}
+
+.medical_way_widget_advanced_recent_posts .advanced-recent-posts-date {
+    font-style: italic;
+    display: block;
+    margin-bottom: 3px;
+    font-size: 13px;
+}
+
+#home-page-widget-area::after,
+#home-page-widget-area::before,
+#home-page-widget-area .widget::after,
+#home-page-widget-area .widget::before {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+#footer-widgets .advanced-recent-posts-item {
+    border-top: 1px solid #3c3c3c;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+#footer-widgets .advanced-recent-posts-item:first-child {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.widget_tag_cloud .tagcloud a {
+    font-size: 14px!important;
+    border: 1px solid #bababa;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-bottom: 5px;
+    line-height: 22px;
+}
+
+/*--------------------------------------------------------------
+### Latest News post widget style By Manesh
+--------------------------------------------------------------*/
+.medical_way_widget_latest_news{
+    padding-bottom: 50px;
+}
+.medical_way_widget_latest_news .latest-news-item {
+    display: inline-block;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    vertical-align: top;
+    margin-left: -3px!important;
+}
+
+.medical_way_widget_latest_news .latest-news-item img {
+    margin: 0;
+}
+
+
+.medical_way_widget_latest_news .latest-news-title > a {
+    color: #2fa3ad;
+    font-weight: 400;
+	float:left;
+	width:100%;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.medical_way_widget_latest_news .latest-news-wrapper {
+    position: relative;
+    transition: all 0.5s ease 0s;
+    border-bottom: 5px solid transparent;
+
+}
+
+.medical_way_widget_latest_news .latest-news-wrapper::after {
+    bottom: -44px;
+    content: "";
+    display: block;
+    height: 44px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+
+}
+
+.medical_way_widget_latest_news .latest-news-wrapper:hover::after {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+
+
+a.read-more {
+    background: #2fa3ad none repeat scroll 0 0;
+    color: #ffffff;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 8px;
+    text-align: center;
+}
+
+
+
+.medical_way_widget_latest_news .latest-news-thumb {
+    overflow: hidden;
+	margin-bottom:15px;
+	position:relative;
+}
+
+.medical_way_widget_latest_news .latest-news-item img {
+    vertical-align: middle;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.medical_way_widget_latest_news .latest-news-title {
+    margin-bottom:15px;
+	float: left;
+    width: 100%;
+}
+
+.medical_way_widget_latest_news .latest-news-col-2 .latest-news-item {
+    width: 50%;
+}
+
+.medical_way_widget_latest_news .latest-news-col-3 .latest-news-item {
+    width: 33.33%;
+}
+
+.medical_way_widget_latest_news .latest-news-col-4 .latest-news-item {
+    width: 25%;
+}
+
+.medical_way_widget_latest_news .latest-news-meta > span {
+    font-size: 12px;
+}
+
+.medical_way_widget_latest_news .latest-news-meta .latest-news-comments {
+    float: right;
+}
+
+.medical_way_widget_latest_news .latest-news-col-3 .latest-news-meta > span {
+    font-size: 15px;
+}
+
+.medical_way_widget_latest_news .latest-news-meta > span::before {
+    content: "";
+    display: inline-block;
+    float: left;
+    font-family: FontAwesome;
+    font-size: 12px;
+    height: auto;
+    line-height: 1.7;
+    margin-right: 7px;
+}
+
+.medical_way_widget_latest_news .latest-news-meta > span.latest-news-date::before {
+    content: "\f073";
+}
+
+.medical_way_widget_latest_news .latest-news-meta > span.latest-news-comments::before {
+    content: "\f086";
+}
+
+.latest-news-wrapper {
+    float: left;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+.latest-news-widget .latest-news-item {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.medical_way_widget_latest_news .latest-news-excerpt,
+.medical_way_widget_latest_news .latest-news-excerpt p {
+    float: left;
+    width: 100%;
+}
+
+.medical_way_widget_latest_news .latest-news-item  {
+	padding-left:15px;
+	padding-right:15px;
+	margin-bottom:30px;
+}
+
+.latest-news-widget .latest-news-wrapper .overlay {
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    opacity: 0.76;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #000;
+    transition: ease-in-out 0.5s;
+    color: #fff;
+    font-size: 24px;
+    padding-top: 20%;
+}
+
+.latest-news-widget .latest-news-wrapper:hover .overlay {
+    left: 0px;
+    transition: ease-in-out 0.5s;
+}
+
+
+
+/*--------------------------------------------------------------
+## contact widgets style By Manesh
+--------------------------------------------------------------*/
+.bg_enabled.medical_way_widget_contact::before {
+    background: rgba(37, 38, 39, 0.78);
+    content: "";
+    display: block!important;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    left: 0;
+}
+
+.medical_way_widget_contact{
+    background: #ecf5fa none repeat scroll 0 0;
+    padding: 75px 0px;
+    text-align: left;
+    z-index: 999;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+#home-page-widget-area .medical_way_widget_contact .widget-title,
+.medical_way_widget_contact .contact-wrapper form label,
+.contact-right p,
+.medical_way_widget_contact .contact-right ul li h6,
+.medical_way_widget_contact .contact-right ul li h5,
+.medical_way_widget_contact .contact-right ul li h4,
+.medical_way_widget_contact .contact-right ul li i,
+.medical_way_widget_contact .contact-right ul li a {
+	color:#2fa3ad;
+}
+
+.medical_way_widget_contact .contact-right ul li:before {
+	display:none;
+}
+
+.medical_way_widget_contact .contact-right ul li {
+	padding-left:0px;
+}
+
+.medical_way_widget_contact .contact-right ul li h6,
+.medical_way_widget_contact .contact-right ul li h5,
+.medical_way_widget_contact .contact-right ul li h4{
+	padding-bottom:5px;
+	border-bottom:1px solid #fff;
+}
+
+.medical_way_widget_contact .contact-wrapper form label {
+	text-align:left;
+}
+
+.medical_way_widget_contact .contact-wrapper form input,
+.medical_way_widget_contact .contact-wrapper form textarea {
+	margin-top:5px;
+    border:0px;
+}
+
+.medical_way_widget_contact .contact-wrapper form input[type="text"], 
+.medical_way_widget_contact .contact-wrapper form input[type="email"], 
+.medical_way_widget_contact .contact-wrapper form input[type="url"], 
+.medical_way_widget_contact .contact-wrapper form input[type="password"], 
+.medical_way_widget_contact .contact-wrapper form input[type="search"] {
+	padding:10px;
+}
+
+.contact-left,
+.contact-right {
+	float:left;
+	width:50%;
+}
+
+.contact-left {
+	padding-right:15px;
+}
+
+.contact-right {
+	padding-left:15px;
+}
+
+.contact-right iframe {
+	float:left;
+	width:100%;
+	margin-bottom:20px;
+}
+
+.medical_way_widget_contact .contact-right ul li i {
+	margin-right:8px;
+}
+
+.medical_way_widget_contact .contact-wrapper form input[type="submit"] {
+	color:#fff;
+	
+	-webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.medical_way_widget_contact .contact-wrapper form input[type="submit"]:hover {
+	background-color:#DC5520;
+	color:#fff;
+	
+	-webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.bg_enabled.medical_way_widget_contact .contact-wrapper form input[type="submit"]:hover {
+	border-color:#2fa3ad;
+}
+
+#home-page-widget-area .medical_way_widget_contact .widget-title span::before,
+#home-page-widget-area .medical_way_widget_contact .widget-title span::after {
+	background-color: #fff;
+}
+
+#home-page-widget-area .bg_enabled.medical_way_widget_contact .widget-title span::before,
+#home-page-widget-area .bg_enabled.medical_way_widget_contact .widget-title span::after {
+	background-color: #2fa3ad;
+}
+
+
+/*sidebar and footer widget area style*/
+
+#footer-widgets .medical_way_widget_latest_news .latest-news-widget .latest-news-item,
+.sidebar .medical_way_widget_latest_news .latest-news-widget .latest-news-item{
+    margin-bottom: 15px;
+    width: 100%;
+}
+/*--------------------------------------------------------------
+### Our Team widget style By Manesh
+--------------------------------------------------------------*/
+
+.medical_way_widget_team .team-member-wrap,
+.page-template-team .team-member-wrap,
+.medical_way_widget_team .team-member-item .team-member-wrap .member-image,
+.page-template-team .team-member-item .team-member-wrap .member-image,
+.medical_way_widget_team .team-member-item .team-member-wrap .member-image a,
+.page-template-team .team-member-item .team-member-wrap .member-image a,
+.medical_way_widget_team .team-member-item .team-member-wrap  .memeber-details,
+.page-template-team .team-member-item .team-member-wrap  .memeber-details,
+.medical_way_widget_team .team-member-item .team-member-wrap  .memeber-details h3,
+.page-template-team .team-member-item .team-member-wrap  .memeber-details h3,
+.medical_way_widget_team .team-member-item .team-member-wrap  .memeber-details strong,
+.page-template-team .team-member-item .team-member-wrap  .memeber-details strong,
+.medical_way_widget_team .team-member-item .team-member-wrap  .memeber-details p,
+.page-template-team .team-member-item .team-member-wrap  .memeber-details p{
+    float: left;
+    width: 100%;
+}
+
+.medical_way_widget_team .team-top-info,
+.page-template-team  .team-top-info{
+    text-align: center;
+}
+
+.medical_way_widget_team .team-top-info h3,
+.page-template-team .team-top-info h3{
+    color: #2fa3ad;
+    font-size: 32px;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    line-height: 1.4;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.medical_way_widget_team .team-top-info p,
+.page-template-team .team-top-info p{
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.medical_way_widget_team .team-member-wrap  .memeber-details,
+.page-template-team .team-member-wrap  .memeber-details{
+    padding-top:10px;
+    text-align: center;
+}
+
+.medical_way_widget_team .team-member-wrap  .memeber-details h3,
+.page-template-team .team-member-wrap  .memeber-details h3{
+    font-size: 20px;
+    color: #2fa3ad;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.medical_way_widget_team .team-member-wrap  .memeber-details strong,
+.page-template-team .team-member-wrap  .memeber-details strong{
+    color: #f1703d;
+    margin-bottom: 10px;
+}
+
+.medical_way_widget_team .team-member-wrap  .memeber-details p,
+.page-template-team .team-member-wrap  .memeber-details p{
+    color:#999;
+}
+
+.medical_way_widget_team .team-member-wrap .member-image img,
+.page-template-team .team-member-wrap .member-image img{
+    display: inline-block;
+}
+
+.medical_way_widget_team .team-member-item .team-member-wrap .member-image a,
+.page-template-team .team-member-item .team-member-wrap .member-image a{
+    line-height: 1;
+}
+
+
+.medical_way_widget_team .team-member-item,
+.page-template-team .team-member-item{
+    display: inline-block;
+    padding: 0 15px;
+    text-align: center;
+    color: #fff;
+    margin-left: -3px;
+    vertical-align: top;
+    margin-bottom: 30px;
+    width: 33.33%;
+}
+
+.medical_way_widget_team .thumb-summary-wrap,
+.page-template-team .thumb-summary-wrap{
+    position: relative;
+}
+
+.medical_way_widget_team .our-team-summary,
+.page-template-team .our-team-summary{
+    background:rgba(51, 51, 51, 0.51) none repeat scroll 0 0;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+    display: none;
+    padding: 20px 15px 0;
+    position: absolute;
+}
+
+.medical_way_widget_team .our-team-thumb img,
+.page-template-team .our-team-thumb img{
+    width: 100%;
+}
+
+.medical_way_widget_team .our-team-text-wrap,
+.page-template-team .our-team-text-wrap{
+    background:#2fa3ad ;
+    margin: -10px auto 10px;
+    max-width: 100%;
+    padding: 5px;
+    position: relative;
+    z-index: 999;
+}
+
+.medical_way_widget_team .our-team-title,
+.page-template-team .our-team-title{
+    margin: 0;
+}
+
+.medical_way_widget_team .our-team-title > a,
+.page-template-team .our-team-title > a{
+    color: #ffffff;
+}
+
+.medical_way_widget_team .team-designation,
+.page-template-team .team-designation{
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 7px;
+}
+
+.medical_way_widget_team .our-team-col-1 .team-member-item,
+.page-template-team .our-team-col-1 .team-member-item{
+    width: 100%;
+}
+
+.medical_way_widget_team .our-team-col-2 .team-member-item,
+.page-template-team .our-team-col-2 .team-member-item{
+    width: 50%;
+}
+
+.medical_way_widget_team .our-team-col-3 .team-member-item,
+.page-template-team .our-team-col-3 .team-member-item{
+    width: 33.33%;
+}
+
+.medical_way_widget_team .our-team-col-4 .team-member-item,
+.page-template-team .our-team-col-4 .team-member-item{
+    width: 25%;
+}
+
+/* Default background css */
+.medical_way_widget_facts{
+	background:#fff;
+}
+
+/* Blog page starts */
+.page-template-full-width-page #primary {
+    width: 100%;
+}
+
+#primary .post {
+    float: left;
+    width: 100%;
+}
+
+#primary .post {
+    margin-bottom: 40px;
+}
+
+#primary .post  .entry-title,
+#primary article.page  .entry-title {
+    font-size: 20px;
+    letter-spacing: 0px;
+    border-bottom: 0px;
+    padding-bottom: 5px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+#primary .post .entry-meta,
+#primary .post .entry-content,
+#primary .post .entry-footer {
+    font-size: 14px;
+}
+
+#primary .post .entry-content p {
+    line-height: 1.7;
+}
+
+#primary .post .featured-thumb,
+#primary .post .featured-thumb a {
+    float: left;
+    max-width: 100%;
+}
+
+#primary .post .content-wrap {
+    float: left;
+    width: 100%;
+    padding: 10px 0px;
+    background: #fff;
+    text-align: left;
+}
+
+#primary .post .content-wrap.content-no-image {
+    position: static;
+    width: 100%;
+    -webkit-transform: none;
+       -moz-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+}
+
+#primary .post .featured-thumb {
+    float: left;
+}
+
+#primary  .entry-footer .posted-on::before{
+    content: "\f274";
+}
+
+#primary  .entry-meta .cat-links a {
+    color: #999;
+    font-style: normal;
+    font-size: 14px;
+}
+
+#primary  .entry-footer a {
+    color: #999;
+    font-style: normal;
+    text-transform: capitalize;
+}
+
+#sidebar-primary .widget .widget-title,
+#primary .page .entry-title,
+#primary .page-header .page-title{
+    border-bottom: 0px;
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+
+#sidebar-primary .widget .widget-title:after,
+#primary .page .entry-title:after,
+#primary .page-header .page-title:after{
+    content: "";
+    float: left;
+    width: 100%;
+    height: 2px;
+    background: #434343;
+    border-left: 80px solid #2fa3ad;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#primary .page-header .page-title {
+    border: 0;
+    background: transparent;
+    color: #121212;
+    padding-left: 0px;
+    text-align: left;
+}
+
+#primary .page .entry-content ul li i {
+    margin-right: 10px;
+}
+
+#sidebar-primary .widget ul li {
+    padding: 10px 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+#sidebar-primary .widget ul li:last-child {
+    border-bottom: 0;
+}
+
+#footer-widgets ul li {
+    padding: 5px 0px;
+    border-bottom: 1px solid #8e8e8e;
+    margin-bottom: 15px;
+}
+
+#footer-widgets ul li:last-child {
+    border-bottom: 0px;
+}
+
+#footer-widgets .medical_way_widget_social ul li {
+    border-bottom: 0px;
+}
+
+#primary  .entry-footer .byline::before {
+    content: "\f2c0";
+}
+
+.single-wrap .featured-thumb {
+    max-width: 100% !important;
+    width: 100%;
+}
+
+.single-wrap .featured-thumb img {
+    width: 100%;
+
+}
+
+.single-wrap .single-inner {
+    display: block;
+    width: 100%;
+    padding: 0px 40px;
+}
+
+.single-wrap .single-inner-content {
+    margin-top: -75px;
+    background: #fff;
+    position: relative;
+    border-top: 5px solid #2fa3ad;
+    float: left;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.single-wrap.single-no-image .single-inner-content {
+    margin-top: 0px;
+    max-width: 100%;
+} 
+
+.single-wrap .single-inner-content .entry-header {
+    text-align: center;
+}
+
+#primary .single-wrap  .entry-title {
+    margin: 10px 0px;
+}
+
+blockquote{
+    display: block;
+    width: 100%;
+    border-left: 5px solid #2fa3ad;
+    padding: 5px 20px;
+    margin: 15px 0px;
+}
+
+blockquote p{
+    margin-bottom: 0px;
+}
+
+.post-navigation,
+.post-navigation .nav-links,
+.pagination {
+    float: left;
+    width: 100%;
+}
+
+.post-navigation .nav-links .nav-previous {
+    float: left;
+}
+
+.post-navigation .nav-links .nav-next {
+    float: right;
+}
+
+#primary .sticky {
+    text-align: center;
+}
+
+#primary .sticky .featured-thumb {
+    max-width: 100% !important;
+    width: 100%;
+}
+
+#primary .sticky .content-wrap {
+    position: static !important;
+    display: inline-block;
+    float: none !important;
+    top: unset !important;
+    width: 100% !important;
+    -webkit-transform: none;
+       -moz-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+}
+
+#primary .sticky .content-wrap.content-no-image {
+    margin-top: 0px;
+    width: 100% !important;
+    border: 0 !important;
+}
+
+#primary .sticky .content-wrap.content-with-image {
+    border: 0 !important;
+}
+
+#primary .sticky .content-wrap .entry-title a:before {
+	color: #999;
+	content:"\f08d";
+	font-size: 20px;
+	font-family: "FontAwesome";
+	margin-right: 10px;
+	transform: rotate(-25deg);
+	display: inline-block;
+}
+
+/* Blog Page ends */
+
+/*--------------------------------------------------------------
+## Error 404 Page Starts
+--------------------------------------------------------------*/
+.error-404.not-found,
+.error-404.not-found  form.search-form input[type="search"],
+.error-404.not-found  form.search-form input[type="text"],
+.error-404.not-found .page-header {
+    float: left;
+    width: 100%;
+}
+
+ .error-404.not-found {
+    padding: 0px;
+ }
+
+ .error-404.not-found  form.search-form {
+    position: relative;
+    display: inline-block;
+    width: 60%;
+ }
+
+
+ .error-404.not-found  form.search-form input[type="search"],
+.error-404.not-found  form.search-form input[type="text"]{
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.error-404.not-found  form.search-form input[type="submit"]{
+    position: absolute;
+    right: 0;
+    background-color: #2fa3ad;
+    color: #fff; 
+    border:0;
+    padding: 11px 35px 12px 35px;
+    line-height: 1;
+    height: auto;
+}
+
+.error-404.not-found  form.search-form input[type="submit"]:hover{
+    background-color: #2fa3ad;
+    color: #fff;
+    border:0;
+}
+
+.error404 #primary,
+.error-404.not-found .page-header {
+    width: 100%;
+    text-align: center;
+}
+
+.error-404.not-found .page-header .page-title {
+    float: none !important;
+    display: inline-block !important;
+    width: 60% !important;
+}
+
+
+/*-------------------------------------- 
+14.0 Mean Menu  Css Styles
+----------------------------------------*/
+.mean-container .mean-bar {
+    background: transparent;
+    box-shadow: none;
+    z-index: 999;
+
+}
+
+.mean-container a.meanmenu-reveal span{
+    background: #2fa3ad;
+}
+
+.mean-container .mean-nav ul li a  {
+    background: #2fa3ad;
+    font-family: inherit;
+}
+
+.mean-container a.meanmenu-reveal {
+    color: #2fa3ad;
+    top: -3px;
+}
+
+.mean-container .mean-nav {
+    margin-top: 70px;
+}
+
+.mean-container .mean-nav ul li a {
+    text-shadow: none;
+    width: 100%;
+}
+
+.mean-container .mean-nav ul li a.mean-expand {
+    z-index: 999;
+}
+
+
+/*--------------------------------------------------------------
+##  Media Queries
+--------------------------------------------------------------*/
+
+/* Smaller than standard 1139 (devices and browsers) */
+@media only screen and (max-width:1260px) {
+    .site-layout-boxed #page,
+    .container {
+        width: 97%;
+    }
+
+
+    .sidebar .search-form input.search-field {
+        margin: 0;
+        padding: 13px 0 13px 8%;
+        width: 100%;
+    }
+
+    .sidebar input[type="submit"] {
+        display: block;
+        float: left;
+        position: inherit;
+        top: inherit;
+        width: 100%;
+    }
+
+    .comments-area form#commentform p {
+        float: left;
+        width: 100%;
+    }
+
+    #comments input {
+        width: 100%;
+    }
+
+    #comments input#submit {
+        width: auto;
+    }
+
+    #main-slider .cycle-caption {
+        visibility: visible;
+    }
+
+    #main-slider .cycle-caption {
+        opacity: 1;
+	}
+}
+
+@media screen and (max-width: 1170px) {
+
+    #primary .post .featured-thumb {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+
+    #main-nav {
+        display: none;
+    }
+
+    .site-branding {
+    	position: relative;
+    	z-index: 9999;
+    }
+
+    .home.page-template-home #masthead.site-header.header-collapse {
+    	position: relative;
+    }
+
+    #masthead.header-collapse {
+    	padding: 20px 0px;
+    }
+
+    /* Mean MEnu css */
+
+    #main-nav {
+        display: none;
+    }
+
+    .mean-container .main-navigation ul li.menu-item-has-children > a::after,
+    .mean-container .main-navigation ul li.page_item_has_children > a::after {
+        display: none;
+    }
+
+       .mean-container .mean-nav{
+        overflow: hidden;
+    }
+
+    .main-navigation ul li ul{
+        position: relative;
+        top:0;
+        left:0 !important;
+        opacity: 1;
+    }
+
+    .mean-container .mean-nav ul li a.mean-expand {
+        z-index: 99999999;
+        height: 53px;
+        width: 53px;
+        line-height:53px;
+        color: #fff !important;
+        background: #0c737c;
+        box-shadow: none;
+        padding: 0 !important;
+
+    }
+
+    .mean-container .mean-nav ul li a.mean-expand.mean-clicked,
+    .mean-container .mean-nav ul li a.mean-expand.mean-clicked:hover,
+    .mean-container .mean-nav ul li a.mean-expand:hover  {
+        background: #0c737c;
+    }
+
+    .mean-container  .main-navigation ul li.menu-item-has-children > a, 
+    .mean-container  .main-navigation ul li.page_item_has_children > a {
+        padding-right: 40px;
+    }
+
+    .mean-container .mean-nav ul li li a {
+        width: 100%;
+        opacity: 1;
+    }
+
+    .mean-container .mean-nav ul li li li a {
+    width: 100%;
+    }
+
+    .mean-container .main-navigation ul li.menu-item-has-children ul.sub-menu li a{
+    color: #fff;
+    }
+
+    .mean-container .mean-nav ul li a:hover {
+         background: #1b98a3;
+         color: #fff;
+    }
+
+    /* Mean Menu css ends */
+
+    .home.page .slider-enabled.header-collapse ul li a {
+    	color: #fff;
+    }
+
+}
+
+/* Smaller than standard 1024 (devices and browsers) */
+@media only screen and (max-width:1023px) {
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3{
+        font-size: 18px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    h5 {
+        font-size: 15px;
+    }
+
+    h6 {
+        font-size: 14px;
+    }
+
+    .inner-wrapper {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    #primary,
+    .sidebar,
+    #colophon,
+    #featured-clients {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    /*Main slider*/
+
+    #main-slider .cycle-caption {
+        max-width: 57%;
+        padding: 15px;
+    }
+
+    #main-slider .cycle-slide {
+        width: 100%;
+    }
+
+    #main-slider .cycle-caption {
+        padding:15px;
+    }
+
+
+    td,
+    th {
+        font-size: 12px;
+        padding: 2px;
+        text-align: center;
+    }
+
+    .main-navigation ul  ul {
+        top: 40px;
+    }
+
+    .main-navigation ul ul a {
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+/*--------------------------------------------------------------
+ Responsive css additional
+--------------------------------------------------------------*/
+
+    .medical_way_widget_advanced_recent_posts img {
+        float: none;
+    }
+
+    /*.medical_way_widget_latest_news .latest-news-item,*/
+	#featured-content article,
+    .services-item ,
+    .medical_way_widget_services .services-item{
+        padding: 15px 15px;
+    }
+
+    .medical_way_widget_latest_news .latest-news-meta .latest-news-comments {
+        clear: both;
+        display: block;
+        float: none;
+    }
+
+    .medical_way_widget_testimonials .testimonial-widget {
+        margin: 0;
+    }
+
+    .medical_way_widget_advanced_recent_posts img {
+        float: none;
+    }
+
+    
+    /*.medical_way_widget_latest_news .latest-news-item,*/
+	#featured-content article,
+    .services-item ,
+    .medical_way_widget_services .services-item{
+        padding: 15px 15px;
+    }
+
+    .medical_way_widget_latest_news .latest-news-meta .latest-news-comments {
+        clear: both;
+        display: block;
+        float: none;
+    }
+
+    .medical_way_widget_testimonials .testimonial-widget {
+        margin: 0;
+    }
+
+    .top-header .top-social-menu {
+        vertical-align: top;
+    }
+
+    .top-header .medical_way_widget_social {
+    	line-height: 0px;
+    }
+
+    .top-header .top-menu-content ul li a,
+    .top-header .top-left span {
+    	padding: 10px;
+    }
+
+    .top-header .top-left span:last-child {
+        border-right: 0px;
+    }
+
+    .top-header .top-left,
+    .top-header  .top-right,
+    #main-slider .cycle-slide .cycle-caption .caption-wrap {
+    	width: 100%;
+    }
+
+    .top-header  .top-right {
+    	float: left;
+    	border-top:1px dotted #ddd;
+        text-align: center;
+        margin-bottom: -8px;
+    }
+
+    .top-header .top-left {
+        text-align: center;
+    }
+
+    .top-header .top-menu-content {
+        float: none;
+        display: inline-block;
+    }
+
+    .top-header .top-menu-content > div {
+        float: left;
+    }
+
+}
+/*--------------------------------------------------------------
+ Responsive css
+--------------------------------------------------------------*/
+
+/* All Mobile Sizes (devices and browser) */
+
+@media screen and (max-width: 991px){
+
+    #primary .post .content-wrap {
+        position: static;
+        width: 100%;
+        top: unset;
+        transform: none;
+    }
+
+    #primary .post .featured-thumb {
+        max-width: 100%;
+    }
+
+    #primary .post .featured-thumb, 
+    #primary .post .featured-thumb img,
+    #primary .post .featured-thumb a{
+        width: 100%;
+        float: left;
+        line-height: 1;
+    }
+
+    .single-wrap .single-inner {
+        padding:0;
+    }
+
+    .single-wrap .single-inner-content {
+        margin-top: 0px;
+    }
+
+    .medical_way_widget_services .services-left,
+    .medical_way_widget_services .services-right{
+    	width: 50%;
+    }
+
+    .medical_way_widget_services .services-item,
+    .medical_way_widget_services form{
+    	width: 100%;
+    }
+
+    .medical_way_widget_services .services-item p{
+    	margin-bottom: 0px;
+    }
+
+    #home-page-widget-area  .widget.medical_way_widget_call_to_action {
+    	padding-bottom: 20px;
+    }
+    
+}
+
+@media only screen and (max-width:900px) {
+
+
+  body{
+        padding-top: 0;
+    }
+
+    .enabled-sticky-primary-menu  #masthead.fixed {
+        top: 39px;
+    }
+    .enabled-sticky-primary-menu.admin-bar #masthead.fixed {
+        top: 87px;
+    }
+
+    #mobile-trigger {
+        background: #000000 none repeat scroll 0 0;
+        display: block;
+        left: 0;
+        padding: 5px;
+        position: fixed;
+        text-align: center;
+        top: 0;
+        width: 100%;
+        z-index: 999999;
+    }
+    .logged-in #mobile-trigger {
+        top: 45px;
+    }   
+
+    #masthead {
+        text-align: center;
+    }
+
+    #mobile-trigger i {
+        background-color: #2fa3ad ;
+        border: 2px solid #fffffe;
+        box-shadow: 0 1px 2px #000000;
+        color: #ffffff;
+        font-size: 21px;
+        padding: 6px 8px;
+    }
+    .site-layout-boxed #page {
+        margin-top: 70px;
+    }
+
+    .medical_way_widget_latest_news .latest-news-col-4 .latest-news-item {
+        width: 50%;
+		margin-bottom:15px;
+    }
+    .medical_way_widget_team .our-team-summary {
+        display: none!important;
+    }
+    .medical_way_widget_services .services-column-4 .services-item {
+        width: 50%;
+    }
+
+
+    .site-layout-boxed #page {
+        padding-top: 0;
+    }
+    .site-logo-link, .custom-logo-link {
+        float: left;
+        margin-right: 15px;
+        max-width: inherit;
+    }
+    #site-identity {
+        clear: inherit;
+        float: left;
+    }
+	
+	/* media css main-slider */	
+	#main-slider .item .caption h3 {
+		font-size:45px;		
+	}
+	
+	#main-slider .item .caption .slider-meta {
+		font-size:20px;		
+	}
+	
+	#home-page-widget-area .medical_way_widget_features .features-list .features-detail {
+		padding-left:20px;		
+	}
+	
+	
+	.site-branding {
+		position:relative;
+		z-index:99999999;		
+	}
+
+	.page-template-services  .services-item,
+	.page-template-departments .department-item {
+		width: 50%;
+	}
+	
+}
+
+@media screen and (max-width: 850px){
+
+	.medical_way_widget_departments .department-item {
+		width: 100%;
+	}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width:767px) {
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3{
+        font-size: 18px;
+    }
+
+    h4 {
+        font-size:16px;
+    }
+
+    h5 {
+        font-size: 15px;
+    }
+
+    h6 {
+        font-size: 14px;
+    }
+
+   .site-layout-boxed #page .container  {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .widget.medical_way_widget_call_to_action {
+        display: block;
+        margin-bottom: 25px;
+        padding: 15px;
+        float: left;
+    }
+
+    .medical_way_widget_call_to_action .cta-left, 
+    .medical_way_widget_call_to_action .cta-right {
+    	width: 100%;
+    }
+
+    .site-layout-boxed #page {
+        width: 90%;
+        padding: 0 15px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 0 15px;
+    }
+
+    .site-layout-boxed #featured-slider,
+    .site-layout-boxed #footer-widgets,
+    .site-layout-boxed #colophon {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    #featured-slider, #footer-widgets, #colophon {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #home-page-widget-area .widget-title span {
+        margin-bottom: 0;
+    }
+
+
+    .site-branding {
+        text-align: left;
+    }
+
+    .site-content {
+        padding-top: 15px;
+    }
+
+    .team-member-item {
+        width: 50%;
+    }
+
+
+
+    /*featured slider style*/
+
+    #main-slider .cycle-caption h3 {
+        font-size: 19px;
+        font-weight: bold;
+        line-height: 1.4;
+        margin-bottom: 6px;
+    }
+
+    #main-slider .cycle-prev::after,
+    #main-slider .cycle-next::after {
+        font-size: 23px;
+        padding: 15px;
+    }
+
+    #main-slider .cycle-caption {
+        max-width: 66%;
+    }
+
+    #main-slider .cycle-prev::after, #main-slider .cycle-next::after {
+        font-size: 23px;
+        padding: 5px 10px;
+    }
+
+    #main-slider .cycle-caption p {
+        font-size: 13px;
+        overflow: hidden;
+    }
+
+    #main-slider .cycle-pager {
+        bottom: 0;
+        left: 10px;
+    }
+
+    #main-slider .cycle-prev {
+        left: inherit;
+        right: 50px;
+    }
+
+    #main-slider .cycle-next {
+        right: 15px;
+    }
+
+    #main-slider .cycle-prev, #main-slider .cycle-next {
+        bottom: 10px;
+    }
+	
+	/* main-slider media css */
+	#main-slider .item .caption h3 {
+	  font-size: 30px;
+	}
+		
+	#main-slider .item .caption .slider-meta {
+		font-size: 18px;
+		padding: 20px 0px 10px 0px;
+	}
+	
+	#main-slider .item .caption h3:after {
+		top:50px;		
+	}
+	
+	#main-slider .item .caption .slider-cta {
+    	padding-top: 30px;
+	}
+	
+	#main-slider .item .caption {
+		padding-top:20px;		
+	}
+	
+	/*main-slider media css ends */
+
+    /*featured content*/
+
+    #featured-content article {
+        float: left;
+        padding: 0 15px;
+        max-width: 100%;
+    }
+
+    #featured-content,
+    #featured-content,
+    #content {
+        clear: both;
+        padding-top: 20px;
+    }
+
+    #home-page-widget-area {
+        clear: both;
+        padding: 30px 0;
+    }
+
+    #home-page-widget-area .widget {
+        margin-top: 15px;
+    }
+
+
+    /*sidebar layout*/
+
+    #primary,
+    #sidebar-primary,
+    #sidebar-secondary {
+        width: 100%;
+        clear: both;
+        float: none;
+    }
+
+    .global-layout-three-columns #primary,
+    .global-layout-three-columns .sidebar {
+        display: inline-block;
+        float: none;
+        width: 100%;
+    }
+
+    /*footer widget area*/
+
+    .sibebar{
+        margin-top: 15px;
+    }
+
+    #footer-widgets .widget-column {
+        float: left;
+        padding: 0 15px;
+        width: 50%;
+    }
+
+    #footer-widgets .widget-column:nth-child(3n) {
+        clear: both;
+    }
+
+    .services-item {
+        width: 50%;
+    }
+
+    .team-member-item {
+        width: 50%;
+    }
+
+    #home-page-widget-area .medical_way_widget_call_to_action::before,
+    #home-page-widget-area .medical_way_widget_call_to_action::after,
+    .medical_way_widget_call_to_action::after,
+    .medical_way_widget_call_to_action::before,
+    #home-page-widget-area .widget.medical_way_widget_call_to_action::after {
+        display: none;
+    }
+
+    #featured-content .featured-content-column-4 article {
+        max-width: 50%;
+    }
+
+    .medical_way_widget_call_to_action {
+        padding: 15px;
+    }
+
+    .widget {
+        margin: 15px 0 0;
+    }
+
+    .testimonial-widget {
+        padding: 0;
+    }
+
+    .medical_way_widget_advanced_recent_posts img {
+        float: left;
+    }
+
+    .medical_way_widget_advanced_recent_posts {
+        text-align: left;
+    }
+
+    #footer-widgets {
+        padding: 30px 15px;
+    }
+    #featured-clients {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    #colophon .copyright,
+        #colophon .site-info {
+        clear: both;
+        text-align: center;
+        width: 100%;
+    }
+    #featured-content .featured-content-column-3 article {
+        max-width: 100%;
+    }
+    .medical_way_widget_team .our-team-col-4 .team-member-item,
+    .medical_way_widget_team .our-team-col-3 .team-member-item {
+        width: 50%;
+    }
+	
+	/* other sections css except slider */
+	
+	/* medical way widget services css */
+	.medical_way_widget_services .services-column-3 .services-item {
+   		 width: 50%;
+	}
+	
+	/* medical way widget feature css */
+	#home-page-widget-area .medical_way_widget_features .feature-image,
+	#home-page-widget-area .medical_way_widget_features .features-list {
+		width:100%;		
+	}
+	
+	#home-page-widget-area .medical_way_widget_features .feature-image {
+		padding:0;		
+	}
+	
+	#home-page-widget-area .medical_way_widget_features .features-list .features-detail {
+   	 padding-left: 0;
+	}
+	
+	/* medical way widget lates news css */
+	.medical_way_widget_latest_news .inner-wrapper {
+		text-align:center;		
+	}
+	
+	.medical_way_widget_latest_news .latest-news-widget .latest-news-item {
+		float:none;
+		display:inline-block;
+		width:60%;
+		margin-bottom:15px;		
+	}
+	
+	/* medical way widget facts css */
+	.medical_way_widget_facts .counter-item span.count-icon i {
+		font-size:30px;		
+	}
+	
+	.medical_way_widget_facts .counter-item span.count {
+		font-size:40px;		
+	}
+	
+	/* medical way widget contact css */
+	#home-page-widget-area  .widget.medical_way_widget_contact {
+		margin-top:0px;			
+	}
+	
+	#home-page-widget-area {
+		padding-bottom:0px;		
+	}
+	
+	.contact-left, 
+	.contact-right {
+		width:100%;
+		padding:0;		
+	}
+	
+	.contact-left {
+		margin-bottom:15px;		
+	}
+	
+	#colophon .copyright {
+		margin-bottom:5px;		
+	}
+	
+	/* header css */
+	.medical_way_widget_services .services-left,
+    .medical_way_widget_services .services-right {
+    	width: 100%;
+    	padding-left: 0px;
+    	padding-right: 0px;
+    }
+
+    .medical_way_widget_services .services-info-title, 
+    .page-template-services  .services-info-title,
+    .medical_way_widget_call_to_action .call-to-action-content h3,
+    .medical_way_widget_departments .department-info-title, 
+    .page-template-departments .department-info-title,
+    .page-template-team .team-top-info h3 {
+    	font-size:25px; 
+    }
+
+    .medical_way_widget_departments .department-left,
+    .medical_way_widget_departments .department-right {
+    	width: 100%;
+    	padding-left:0px;
+    	padding-right: 0px;
+    }
+
+    .medical_way_widget_departments {
+    	clear: both;
+    }
+
+    .medical_way_widget_team .team-member-item, 
+    .page-template-team .team-member-item {
+    	width: 100%;
+    }
+
+     #footer-widgets .widget-column {
+        width: 100%;
+        padding-top: 15px;
+        margin-top: 15px;
+    }
+
+    #home-page-widget-area  .widget.medical_way_widget_call_to_action {
+        padding-bottom: 0px;
+    }
+
+    .medical_way_widget_call_to_action .cta-right {
+        line-height: 0;
+    }
+
+    /* Counter css */
+    .medical_way_widget_facts .fact-fourth .counter-item,
+    .medical_way_widget_facts .counter-item {
+        width:50%;
+        margin-bottom:20px;     
+    }
+
+    .medical_way_widget_testimonial #testimonials-slider .testimonials-wrap {
+        width: 100%;
+    }
+	
+	
+}
+
+@media screen and (max-width:640px){
+
+	.top-header .top-left span:last-child {
+		border-bottom: 0px;
+	}
+
+	.slider-cta {
+		padding-top: 10px;
+	}
+
+	.page-template-services  .services-item,
+	.page-template-departments .department-item {
+		width: 100%;
+	}
+
+    .top-header .top-menu-content ul li a, 
+    .top-header .top-left span {
+        padding: 5px;
+    }
+
+    .top-header .top-social-menu {
+        margin-top: 5px;
+    }
+
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width:550px) {
+    .medical_way_widget_latest_news .latest-news-widget .latest-news-item {
+        width: 100%;
+    }
+    #main-slider .cycle-caption {
+        max-width: 90%;
+    }
+    #main-slider:hover .cycle-caption,
+    #main-slider .cycle-caption {
+        opacity: 1;
+        visibility: visible;
+    }
+    .medical_way_widget_latest_news .latest-news-col-4 .latest-news-item,
+    .medical_way_widget_latest_news .latest-news-col-3 .latest-news-item
+    .medical_way_widget_latest_news .latest-news-col-2 .latest-news-item
+    .medical_way_widget_services .services-column-4 .services-item,
+    .medical_way_widget_services .services-column-3 .services-item
+    .medical_way_widget_services .services-column-2 .services-item {
+        width: 100%;
+    }
+    .widget.medical_way_widget_services .services-item {
+        width: 100%;
+    }
+    .medical_way_widget_featured_page img {
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+    .medical_way_widget_latest_news .latest-news-item img {
+        width:100%;
+    }
+	
+	#home-page-widget-area .widget-title {
+		font-size:27px;		
+	}
+	
+	/* css for slider-caption */
+	#main-slider .item .caption h3:after {
+		top: unset;
+		bottom: -12px;
+	}
+	
+	#main-slider .item .caption h3 {
+   	 	font-size: 28px;
+	 	line-height: 1.5;
+	}
+	
+	#main-slider .item .caption .slider-meta {
+    	font-size: 18px;
+	}
+	
+	/*medical way features widget css */
+	#home-page-widget-area .medical_way_widget_features .features-list .features-detail {
+   		 padding-left: 15px;
+	}
+	
+	/* medical way widget facts css */
+    #primary .post  .entry-title {
+        font-size: 18px;
+    }
+
+    #primary .post .entry-footer span {
+        float: left;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #primary .post .entry-footer span.author {
+        float: none;
+        width: auto;
+        margin-bottom: 0px;
+    }
+
+    .top-header .top-left span {
+        width: 100%;
+        border-right: 0px;
+        border-bottom: 1px dotted #ddd;
+    }
+
+    .top-header .top-left span:last-chils {
+        border-bottom: 0px;
+    }
+	
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width:479px) {
+    .custom-logo-link,.site-logo-link,
+    #site-identity {
+        display: block;
+        float: none;
+        margin-right: 0;
+        text-align: center;
+        width: 100%;
+        max-width: inherit;
+    }
+
+    /*main slider */
+
+
+    #main-slider:hover .cycle-caption,
+    #main-slider .cycle-caption {
+        padding: 5px;
+        width: 90%;
+    }
+
+    #main-slider .cycle-caption h3 {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 0;
+        overflow: hidden;
+    }
+
+    #main-slider .cycle-pager {
+        bottom: -3px;
+    }
+
+    #main-slider .cycle-caption p {
+        display: none;
+    }
+
+    #footer-widgets .widget-column {
+        width: 100%;
+    }
+
+    #footer-widgets .widget-column:first-child {
+        border: none;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+   .medical_way_widget_team .team-member-item {
+        width: 100%;
+    }
+
+    .client-item {
+        display: inline-block;
+        margin: 15px 25px;
+    }
+
+    #featured-clients .cycle-prev,
+    #featured-clients .cycle-next {
+        display: none;
+    }
+
+    .site-description {
+        margin-bottom: 10px;
+    }
+
+    .medical_way_widget_call_to_action {
+        /*border-left: 3px solid #2fa3ad ;
+        border-right: 3px solid #2fa3ad ; */
+		border:0;
+    }
+
+    #featured-content .featured-content-column-3 article,
+    #featured-content .featured-content-column-4 article {
+        max-width: 100%;
+    }
+
+    .search-form input.search-field {
+        width: 76%;
+    }
+
+    .search-box .search-box-wrap {
+        right: 3%;
+        width: 263px;
+    }
+
+    .social-links {
+        float: right;
+        max-width: 208px;
+        text-align: right;
+    }
+
+
+    .social-links .medical_way_widget_social li {
+        display: inline-block;
+        float: none;
+    }
+
+    .search-box {
+        float: right;
+        position: relative;
+        width: 33px;
+    }
+    .site-layout-boxed #page .container {
+        padding: 0;
+        width: 100%;
+    }
+    .medical_way_widget_team .our-team-col-4 .team-member-item,
+    .medical_way_widget_team .our-team-col-3 .team-member-item,
+    .medical_way_widget_team .our-team-col-2 .team-member-item {
+        width: 100%;
+    }
+	
+	/* css widget title */
+	
+	#home-page-widget-area .widget-title span::before,
+	#home-page-widget-area .widget-title span::after {
+		width:25px;
+	}
+	
+	#home-page-widget-area .widget-title span {
+		float:left;
+		width:100%;		
+	}
+	
+	#home-page-widget-area .widget-title span::before {
+		right:unset;
+		left:0;		
+	}
+	
+	#home-page-widget-area .widget-title span::after {
+		left:unset;
+		right:0;		
+	}
+	
+	/* slider caption css */
+	#main-slider .item .caption h3 {
+		font-size: 22px;
+		line-height: 1.2;
+	}
+	
+	#main-slider .item .caption .slider-meta {
+    	font-size: 14px;
+	}
+	
+	/*  css medical way feature widget */
+	#home-page-widget-area .medical_way_widget_features .features-list .features-icon i {
+		text-align:left;		
+	}
+	
+	/* medical way widget facts */
+	.medical_way_widget_facts .counter-item span.count-text {
+		font-size:15px;		
+	}
+
+    #primary .post .content-wrap {
+        padding: 20px;
+    }
+
+    .top-header .top-menu-content {
+    	width: 100%;
+    }
+	
+	.top-header .top-menu-content  {
+		border-right: 0px;
+	}
+
+	.medical_way_widget_facts .fact-fourth .counter-item, 
+	.medical_way_widget_facts .counter-item {
+		width: 100%;
+	}
+
+    .top-header  .top-right,
+    .top-header .top-left {
+        margin-bottom: 0px;
+        text-align: left;
+    }
+
+    .top-header .top-menu-content {
+        border-bottom: 1px dotted #ddd;
+    }
+
+    .top-header .top-social-menu {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+}
+
+@media screen and (max-width:350px){
+	
+	#home-page-widget-area .widget-title {
+    	font-size: 22px;
+	}
+	
+}
